@@ -1,0 +1,13 @@
+{
+  "case_id": "EC_024",
+  "order_id": "d8716a985f69a46751cc046b0fea0d98",
+  "order_status": "unavailable",
+  "order_delivered_carrier_date": null,
+  "freight_total_brl": 0.0,
+  "seller_ids": [],
+  "violating_sellers": [],
+  "items": [],
+  "evidence_ids": [
+    "order:d8716a985f69a46751cc046b0fea0d98"
+  ]
+}
