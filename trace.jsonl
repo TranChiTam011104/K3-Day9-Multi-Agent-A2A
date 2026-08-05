@@ -1,250 +1,250 @@
-{"event": "start", "case_id": "EC_001", "claimed_order_id": "e2a03ccf5ea816036608b2d8c3ab8e60", "timestamp": "2026-08-05T12:18:14.272818"}
-{"event": "agent", "case_id": "EC_001", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["f7496d659ca9fdaf323c0aae84176632"], "on_time_sellers": [], "margin_days": 3}, "timestamp": "2026-08-05T12:18:14.307341"}
-{"event": "agent", "case_id": "EC_001", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.321374"}
-{"event": "policy", "case_id": "EC_001", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.321496"}
-{"event": "end", "case_id": "EC_001", "status": "success", "timestamp": "2026-08-05T12:18:14.322682"}
-{"event": "start", "case_id": "EC_002", "claimed_order_id": "8067c5e4834f3c0a3c8a4e921d65c5b1", "timestamp": "2026-08-05T12:18:14.323061"}
-{"event": "agent", "case_id": "EC_002", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["6973a06f484aacf400ece213dbf3d946"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.354635"}
-{"event": "agent", "case_id": "EC_002", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.368535"}
-{"event": "policy", "case_id": "EC_002", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.368651"}
-{"event": "end", "case_id": "EC_002", "status": "success", "timestamp": "2026-08-05T12:18:14.369451"}
-{"event": "start", "case_id": "EC_003", "claimed_order_id": "71303d7e93b399f5bcd537d124c0bcfa", "timestamp": "2026-08-05T12:18:14.369857"}
-{"event": "agent", "case_id": "EC_003", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.400808"}
-{"event": "agent", "case_id": "EC_003", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.417252"}
-{"event": "policy", "case_id": "EC_003", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.417362"}
-{"event": "end", "case_id": "EC_003", "status": "success", "timestamp": "2026-08-05T12:18:14.418272"}
-{"event": "start", "case_id": "EC_004", "claimed_order_id": "fd28a6dfe413804d0b89b7c9abf5b1f3", "timestamp": "2026-08-05T12:18:14.418762"}
-{"event": "agent", "case_id": "EC_004", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["17a053fcb14bd219540cbde0df490be0"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.451960"}
-{"event": "agent", "case_id": "EC_004", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.467279"}
-{"event": "policy", "case_id": "EC_004", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.467391"}
-{"event": "end", "case_id": "EC_004", "status": "success", "timestamp": "2026-08-05T12:18:14.468228"}
-{"event": "start", "case_id": "EC_005", "claimed_order_id": "9a31fd9d697e9670777501f720773fd9", "timestamp": "2026-08-05T12:18:14.468670"}
-{"event": "agent", "case_id": "EC_005", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.500084"}
-{"event": "agent", "case_id": "EC_005", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:18:14.514516"}
-{"event": "policy", "case_id": "EC_005", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.514633"}
-{"event": "end", "case_id": "EC_005", "status": "success", "timestamp": "2026-08-05T12:18:14.515438"}
-{"event": "start", "case_id": "EC_006", "claimed_order_id": "fe51b7fac3bea42115fa1c3b8973cba7", "timestamp": "2026-08-05T12:18:14.515842"}
-{"event": "agent", "case_id": "EC_006", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["85d9eb9ddc5d00ca9336a2219c97bb13"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.548726"}
-{"event": "agent", "case_id": "EC_006", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.563885"}
-{"event": "policy", "case_id": "EC_006", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.563998"}
-{"event": "end", "case_id": "EC_006", "status": "success", "timestamp": "2026-08-05T12:18:14.564743"}
-{"event": "start", "case_id": "EC_007", "claimed_order_id": "ded456690bcb2ffd4def86541479037f", "timestamp": "2026-08-05T12:18:14.565063"}
-{"event": "agent", "case_id": "EC_007", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.598743"}
-{"event": "agent", "case_id": "EC_007", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.613418"}
-{"event": "policy", "case_id": "EC_007", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.613528"}
-{"event": "end", "case_id": "EC_007", "status": "success", "timestamp": "2026-08-05T12:18:14.614378"}
-{"event": "start", "case_id": "EC_008", "claimed_order_id": "2c0032906c603dcc21cd954828fa77d0", "timestamp": "2026-08-05T12:18:14.614781"}
-{"event": "agent", "case_id": "EC_008", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": ["c1ed9e3daf6154542826a6996af0fb8c"], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.645728"}
-{"event": "agent", "case_id": "EC_008", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.660242"}
-{"event": "policy", "case_id": "EC_008", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.660351"}
-{"event": "end", "case_id": "EC_008", "status": "success", "timestamp": "2026-08-05T12:18:14.661151"}
-{"event": "start", "case_id": "EC_009", "claimed_order_id": "3aaee056441dcae251f360b1c71a7279", "timestamp": "2026-08-05T12:18:14.661531"}
-{"event": "agent", "case_id": "EC_009", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["c826c40d7b19f62a09e2d7c5e7295ee2"], "margin_days": 12}, "timestamp": "2026-08-05T12:18:14.693255"}
-{"event": "agent", "case_id": "EC_009", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.708057"}
-{"event": "policy", "case_id": "EC_009", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.708171"}
-{"event": "end", "case_id": "EC_009", "status": "success", "timestamp": "2026-08-05T12:18:14.709012"}
-{"event": "start", "case_id": "EC_010", "claimed_order_id": "3a119f52de09d1b2700815732def8b47", "timestamp": "2026-08-05T12:18:14.709360"}
-{"event": "agent", "case_id": "EC_010", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["891071be6ba827b591264c90c2ae8a63"], "margin_days": 8}, "timestamp": "2026-08-05T12:18:14.744038"}
-{"event": "agent", "case_id": "EC_010", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.757996"}
-{"event": "policy", "case_id": "EC_010", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.758111"}
-{"event": "end", "case_id": "EC_010", "status": "success", "timestamp": "2026-08-05T12:18:14.759032"}
-{"event": "start", "case_id": "EC_011", "claimed_order_id": "2636a02ee7de9590df86a4c24b739c49", "timestamp": "2026-08-05T12:18:14.759458"}
-{"event": "agent", "case_id": "EC_011", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.789596"}
-{"event": "agent", "case_id": "EC_011", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:18:14.803107"}
-{"event": "policy", "case_id": "EC_011", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.803212"}
-{"event": "end", "case_id": "EC_011", "status": "success", "timestamp": "2026-08-05T12:18:14.804022"}
-{"event": "start", "case_id": "EC_012", "claimed_order_id": "103de323ece563a1012b4b6adf5a81b2", "timestamp": "2026-08-05T12:18:14.804448"}
-{"event": "agent", "case_id": "EC_012", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["634964b17796e64304cadf1ad3050fb7"], "margin_days": 11}, "timestamp": "2026-08-05T12:18:14.835534"}
-{"event": "agent", "case_id": "EC_012", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.850094"}
-{"event": "policy", "case_id": "EC_012", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.850208"}
-{"event": "end", "case_id": "EC_012", "status": "success", "timestamp": "2026-08-05T12:18:14.851161"}
-{"event": "start", "case_id": "EC_013", "claimed_order_id": "ee234bfd26ca588915483995d811c1d0", "timestamp": "2026-08-05T12:18:14.851572"}
-{"event": "agent", "case_id": "EC_013", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.881641"}
-{"event": "agent", "case_id": "EC_013", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:18:14.896020"}
-{"event": "policy", "case_id": "EC_013", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.896128"}
-{"event": "end", "case_id": "EC_013", "status": "success", "timestamp": "2026-08-05T12:18:14.896976"}
-{"event": "start", "case_id": "EC_014", "claimed_order_id": "b93b079468bdf6a20fd54cf45d1e03b6", "timestamp": "2026-08-05T12:18:14.897418"}
-{"event": "agent", "case_id": "EC_014", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["cc419e0650a3c5ba77189a1882b7556a"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.927659"}
-{"event": "agent", "case_id": "EC_014", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.942679"}
-{"event": "policy", "case_id": "EC_014", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.942787"}
-{"event": "end", "case_id": "EC_014", "status": "success", "timestamp": "2026-08-05T12:18:14.943509"}
-{"event": "start", "case_id": "EC_015", "claimed_order_id": "c504f1f5fd54cc8398d57dc0da49de01", "timestamp": "2026-08-05T12:18:14.943959"}
-{"event": "agent", "case_id": "EC_015", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:14.975354"}
-{"event": "agent", "case_id": "EC_015", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:14.990402"}
-{"event": "policy", "case_id": "EC_015", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:14.990511"}
-{"event": "end", "case_id": "EC_015", "status": "success", "timestamp": "2026-08-05T12:18:14.991343"}
-{"event": "start", "case_id": "EC_016", "claimed_order_id": "a88edef387e2a7e457695664bf0ddfc0", "timestamp": "2026-08-05T12:18:14.991782"}
-{"event": "agent", "case_id": "EC_016", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["9646c3513289980f17226a2fc4720dbd"], "margin_days": 10}, "timestamp": "2026-08-05T12:18:15.023328"}
-{"event": "agent", "case_id": "EC_016", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.037586"}
-{"event": "policy", "case_id": "EC_016", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.037702"}
-{"event": "end", "case_id": "EC_016", "status": "success", "timestamp": "2026-08-05T12:18:15.038465"}
-{"event": "start", "case_id": "EC_017", "claimed_order_id": "dd6ee4d96f0f3cf1432c3b82818e0387", "timestamp": "2026-08-05T12:18:15.038864"}
-{"event": "agent", "case_id": "EC_017", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["1dfe5347016252a7884b694d4f10f5c4"], "margin_days": 4}, "timestamp": "2026-08-05T12:18:15.073284"}
-{"event": "agent", "case_id": "EC_017", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.088494"}
-{"event": "policy", "case_id": "EC_017", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.088609"}
-{"event": "end", "case_id": "EC_017", "status": "success", "timestamp": "2026-08-05T12:18:15.089546"}
-{"event": "start", "case_id": "EC_018", "claimed_order_id": "97c8513f2504aa8ec05534307a703dea", "timestamp": "2026-08-05T12:18:15.090014"}
-{"event": "agent", "case_id": "EC_018", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["7d76b645482be4a332374e8223836592"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.120437"}
-{"event": "agent", "case_id": "EC_018", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.134783"}
-{"event": "policy", "case_id": "EC_018", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.134887"}
-{"event": "end", "case_id": "EC_018", "status": "success", "timestamp": "2026-08-05T12:18:15.135684"}
-{"event": "start", "case_id": "EC_019", "claimed_order_id": "31f935babbc97f5990e0ffd128e19541", "timestamp": "2026-08-05T12:18:15.136104"}
-{"event": "agent", "case_id": "EC_019", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.165512"}
-{"event": "agent", "case_id": "EC_019", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:18:15.181226"}
-{"event": "policy", "case_id": "EC_019", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.181338"}
-{"event": "end", "case_id": "EC_019", "status": "success", "timestamp": "2026-08-05T12:18:15.182143"}
-{"event": "start", "case_id": "EC_020", "claimed_order_id": "96087ef44ca9abdbc4c372a3dd3c859f", "timestamp": "2026-08-05T12:18:15.182544"}
-{"event": "agent", "case_id": "EC_020", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["7813ea3ebd9411dc600b4dd01f7a97b9"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.213035"}
-{"event": "agent", "case_id": "EC_020", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.228146"}
-{"event": "policy", "case_id": "EC_020", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.228286"}
-{"event": "end", "case_id": "EC_020", "status": "success", "timestamp": "2026-08-05T12:18:15.229368"}
-{"event": "start", "case_id": "EC_021", "claimed_order_id": "13d341318c77969f10d77e1382957542", "timestamp": "2026-08-05T12:18:15.229763"}
-{"event": "agent", "case_id": "EC_021", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.264045"}
-{"event": "agent", "case_id": "EC_021", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.278617"}
-{"event": "policy", "case_id": "EC_021", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.278726"}
-{"event": "end", "case_id": "EC_021", "status": "success", "timestamp": "2026-08-05T12:18:15.279731"}
-{"event": "start", "case_id": "EC_022", "claimed_order_id": "1f7565efbb90c33b80f467d6a75332c5", "timestamp": "2026-08-05T12:18:15.280116"}
-{"event": "agent", "case_id": "EC_022", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["02d35243ea2e497335cd0f076b45675d"], "on_time_sellers": [], "margin_days": 5}, "timestamp": "2026-08-05T12:18:15.311349"}
-{"event": "agent", "case_id": "EC_022", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.326296"}
-{"event": "policy", "case_id": "EC_022", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.326413"}
-{"event": "end", "case_id": "EC_022", "status": "success", "timestamp": "2026-08-05T12:18:15.327636"}
-{"event": "start", "case_id": "EC_023", "claimed_order_id": "5fba7c57daf631028d2a584c52799e24", "timestamp": "2026-08-05T12:18:15.328102"}
-{"event": "agent", "case_id": "EC_023", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["1f50f920176fa81dab994f9023523100"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.359410"}
-{"event": "agent", "case_id": "EC_023", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.373751"}
-{"event": "policy", "case_id": "EC_023", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.373857"}
-{"event": "end", "case_id": "EC_023", "status": "success", "timestamp": "2026-08-05T12:18:15.374772"}
-{"event": "start", "case_id": "EC_024", "claimed_order_id": "d8716a985f69a46751cc046b0fea0d98", "timestamp": "2026-08-05T12:18:15.375256"}
-{"event": "agent", "case_id": "EC_024", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.403841"}
-{"event": "agent", "case_id": "EC_024", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:18:15.418621"}
-{"event": "policy", "case_id": "EC_024", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.418731"}
-{"event": "end", "case_id": "EC_024", "status": "success", "timestamp": "2026-08-05T12:18:15.419552"}
-{"event": "start", "case_id": "EC_025", "claimed_order_id": "e06ff711ddcab05c3651a9b1bb003950", "timestamp": "2026-08-05T12:18:15.419936"}
-{"event": "agent", "case_id": "EC_025", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["391fc6631aebcf3004804e51b40bcf1e"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.452886"}
-{"event": "agent", "case_id": "EC_025", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.468239"}
-{"event": "policy", "case_id": "EC_025", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.468346"}
-{"event": "end", "case_id": "EC_025", "status": "success", "timestamp": "2026-08-05T12:18:15.469113"}
-{"event": "start", "case_id": "EC_026", "claimed_order_id": "966f96af9d189dc428ff04ebbca821b8", "timestamp": "2026-08-05T12:18:15.469526"}
-{"event": "agent", "case_id": "EC_026", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.499672"}
-{"event": "agent", "case_id": "EC_026", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.513976"}
-{"event": "policy", "case_id": "EC_026", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.514084"}
-{"event": "end", "case_id": "EC_026", "status": "success", "timestamp": "2026-08-05T12:18:15.514934"}
-{"event": "start", "case_id": "EC_027", "claimed_order_id": "2f346d92b11fcc7c342b3392b174cf3b", "timestamp": "2026-08-05T12:18:15.515328"}
-{"event": "agent", "case_id": "EC_027", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.545383"}
-{"event": "agent", "case_id": "EC_027", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:18:15.560385"}
-{"event": "policy", "case_id": "EC_027", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.560498"}
-{"event": "end", "case_id": "EC_027", "status": "success", "timestamp": "2026-08-05T12:18:15.561342"}
-{"event": "start", "case_id": "EC_028", "claimed_order_id": "80f0181edc2f4a5bd3384a3c39a83cee", "timestamp": "2026-08-05T12:18:15.561811"}
-{"event": "agent", "case_id": "EC_028", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.590414"}
-{"event": "agent", "case_id": "EC_028", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:18:15.605092"}
-{"event": "policy", "case_id": "EC_028", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.605200"}
-{"event": "end", "case_id": "EC_028", "status": "success", "timestamp": "2026-08-05T12:18:15.606166"}
-{"event": "start", "case_id": "EC_029", "claimed_order_id": "5c932e0a181410b67c77daaed30991af", "timestamp": "2026-08-05T12:18:15.606646"}
-{"event": "agent", "case_id": "EC_029", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["88460e8ebdecbfecb5f9601833981930"], "on_time_sellers": [], "margin_days": 2}, "timestamp": "2026-08-05T12:18:15.643441"}
-{"event": "agent", "case_id": "EC_029", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.658245"}
-{"event": "policy", "case_id": "EC_029", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.658361"}
-{"event": "end", "case_id": "EC_029", "status": "success", "timestamp": "2026-08-05T12:18:15.659474"}
-{"event": "start", "case_id": "EC_030", "claimed_order_id": "405be8487a7fde1db0bc31ad6b08050a", "timestamp": "2026-08-05T12:18:15.659835"}
-{"event": "agent", "case_id": "EC_030", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["cfb1a033743668a192316f3c6d1d2671"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.693686"}
-{"event": "agent", "case_id": "EC_030", "agent": "PaymentAgent", "action": "checked", "data": {"count": 3, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.708995"}
-{"event": "policy", "case_id": "EC_030", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.709105"}
-{"event": "end", "case_id": "EC_030", "status": "success", "timestamp": "2026-08-05T12:18:15.709936"}
-{"event": "start", "case_id": "EC_031", "claimed_order_id": "4274ff4a5df607e75b32b80e2f8eda3f", "timestamp": "2026-08-05T12:18:15.710308"}
-{"event": "agent", "case_id": "EC_031", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["88ae906ea2acf6971f26c3e8b7cb4357"], "margin_days": 2}, "timestamp": "2026-08-05T12:18:15.745153"}
-{"event": "agent", "case_id": "EC_031", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.760082"}
-{"event": "policy", "case_id": "EC_031", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.760202"}
-{"event": "end", "case_id": "EC_031", "status": "success", "timestamp": "2026-08-05T12:18:15.760964"}
-{"event": "start", "case_id": "EC_032", "claimed_order_id": "c4dad201936ed30eef3c94fafa59ed6e", "timestamp": "2026-08-05T12:18:15.761283"}
-{"event": "agent", "case_id": "EC_032", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["1a932caad4f9d804097d7f8e615baed1"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.795284"}
-{"event": "agent", "case_id": "EC_032", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.809919"}
-{"event": "policy", "case_id": "EC_032", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.810028"}
-{"event": "end", "case_id": "EC_032", "status": "success", "timestamp": "2026-08-05T12:18:15.810920"}
-{"event": "start", "case_id": "EC_033", "claimed_order_id": "a5c8f3a11dcb9bd9b0acdfb8101dfdc8", "timestamp": "2026-08-05T12:18:15.811357"}
-{"event": "agent", "case_id": "EC_033", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["1025f0e2d44d7041d6cf58b6550e0bfa"], "on_time_sellers": [], "margin_days": 7}, "timestamp": "2026-08-05T12:18:15.844854"}
-{"event": "agent", "case_id": "EC_033", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.859522"}
-{"event": "policy", "case_id": "EC_033", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.859642"}
-{"event": "end", "case_id": "EC_033", "status": "success", "timestamp": "2026-08-05T12:18:15.860627"}
-{"event": "start", "case_id": "EC_034", "claimed_order_id": "973acef56bf70feefa8264d4e9f300fc", "timestamp": "2026-08-05T12:18:15.861013"}
-{"event": "agent", "case_id": "EC_034", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["66922902710d126a0e7d26b0e3805106"], "on_time_sellers": [], "margin_days": 6}, "timestamp": "2026-08-05T12:18:15.892732"}
-{"event": "agent", "case_id": "EC_034", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.906973"}
-{"event": "policy", "case_id": "EC_034", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.907089"}
-{"event": "end", "case_id": "EC_034", "status": "success", "timestamp": "2026-08-05T12:18:15.907945"}
-{"event": "start", "case_id": "EC_035", "claimed_order_id": "2478ddd1d1395639b71cf0d498d8dbf6", "timestamp": "2026-08-05T12:18:15.908339"}
-{"event": "agent", "case_id": "EC_035", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["4e17c65a516f69d023a2ae78b84f28d6"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.941333"}
-{"event": "agent", "case_id": "EC_035", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:15.956436"}
-{"event": "policy", "case_id": "EC_035", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:18:15.956549"}
-{"event": "end", "case_id": "EC_035", "status": "success", "timestamp": "2026-08-05T12:18:15.957330"}
-{"event": "start", "case_id": "EC_036", "claimed_order_id": "c609f82bcf7a90292a5940205ebd7e93", "timestamp": "2026-08-05T12:18:15.957743"}
-{"event": "agent", "case_id": "EC_036", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:15.988418"}
-{"event": "agent", "case_id": "EC_036", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:18:16.003743"}
-{"event": "policy", "case_id": "EC_036", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.003860"}
-{"event": "end", "case_id": "EC_036", "status": "success", "timestamp": "2026-08-05T12:18:16.004568"}
-{"event": "start", "case_id": "EC_037", "claimed_order_id": "b90e46cdc30adec2f0fa041984341170", "timestamp": "2026-08-05T12:18:16.004890"}
-{"event": "agent", "case_id": "EC_037", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["1ca7077d890b907f89be8c954a02686a"], "on_time_sellers": [], "margin_days": 4}, "timestamp": "2026-08-05T12:18:16.038174"}
-{"event": "agent", "case_id": "EC_037", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.053264"}
-{"event": "policy", "case_id": "EC_037", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.053381"}
-{"event": "end", "case_id": "EC_037", "status": "success", "timestamp": "2026-08-05T12:18:16.054578"}
-{"event": "start", "case_id": "EC_038", "claimed_order_id": "6b27933c6a46e3d66203137ad1fdb678", "timestamp": "2026-08-05T12:18:16.054948"}
-{"event": "agent", "case_id": "EC_038", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["46dc3b2cc0980fb8ec44634e21d2718e"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:16.085888"}
-{"event": "agent", "case_id": "EC_038", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.101158"}
-{"event": "policy", "case_id": "EC_038", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.101330"}
-{"event": "end", "case_id": "EC_038", "status": "success", "timestamp": "2026-08-05T12:18:16.102198"}
-{"event": "start", "case_id": "EC_039", "claimed_order_id": "44a03ff139461361ec4cce7949663c2f", "timestamp": "2026-08-05T12:18:16.102581"}
-{"event": "agent", "case_id": "EC_039", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["da8622b14eb17ae2831f4ac5b9dab84a"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:16.134292"}
-{"event": "agent", "case_id": "EC_039", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.149011"}
-{"event": "policy", "case_id": "EC_039", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.149116"}
-{"event": "end", "case_id": "EC_039", "status": "success", "timestamp": "2026-08-05T12:18:16.149941"}
-{"event": "start", "case_id": "EC_040", "claimed_order_id": "11bc240af3d9e1f77218715480a65b77", "timestamp": "2026-08-05T12:18:16.150329"}
-{"event": "agent", "case_id": "EC_040", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["fe2032dab1a61af8794248c8196565c9"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:16.180772"}
-{"event": "agent", "case_id": "EC_040", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.194989"}
-{"event": "policy", "case_id": "EC_040", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.195096"}
-{"event": "end", "case_id": "EC_040", "status": "success", "timestamp": "2026-08-05T12:18:16.196010"}
-{"event": "start", "case_id": "EC_041", "claimed_order_id": "64a8b3b4c19751b51d211deb32fdc67b", "timestamp": "2026-08-05T12:18:16.196382"}
-{"event": "agent", "case_id": "EC_041", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:16.226472"}
-{"event": "agent", "case_id": "EC_041", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.241514"}
-{"event": "policy", "case_id": "EC_041", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.241623"}
-{"event": "end", "case_id": "EC_041", "status": "success", "timestamp": "2026-08-05T12:18:16.242504"}
-{"event": "start", "case_id": "EC_042", "claimed_order_id": "8a5fc33c79bf3f4d9bbcc3dceb6b67c4", "timestamp": "2026-08-05T12:18:16.242847"}
-{"event": "agent", "case_id": "EC_042", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["6bbcb8924baf70b7fe2fe2097e8cd407"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:16.273148"}
-{"event": "agent", "case_id": "EC_042", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.288958"}
-{"event": "policy", "case_id": "EC_042", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.289066"}
-{"event": "end", "case_id": "EC_042", "status": "success", "timestamp": "2026-08-05T12:18:16.289949"}
-{"event": "start", "case_id": "EC_043", "claimed_order_id": "3ef6bcdda6193f8657168ba7e8b3e948", "timestamp": "2026-08-05T12:18:16.290349"}
-{"event": "agent", "case_id": "EC_043", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["46dc3b2cc0980fb8ec44634e21d2718e"], "on_time_sellers": [], "margin_days": 6}, "timestamp": "2026-08-05T12:18:16.325499"}
-{"event": "agent", "case_id": "EC_043", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.340417"}
-{"event": "policy", "case_id": "EC_043", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.340532"}
-{"event": "end", "case_id": "EC_043", "status": "success", "timestamp": "2026-08-05T12:18:16.341383"}
-{"event": "start", "case_id": "EC_044", "claimed_order_id": "d671370d11048a2dab56335d3d91823e", "timestamp": "2026-08-05T12:18:16.341776"}
-{"event": "agent", "case_id": "EC_044", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["4a3ca9315b744ce9f8e9374361493884"], "on_time_sellers": [], "margin_days": 10}, "timestamp": "2026-08-05T12:18:16.372699"}
-{"event": "agent", "case_id": "EC_044", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.387858"}
-{"event": "policy", "case_id": "EC_044", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.387978"}
-{"event": "end", "case_id": "EC_044", "status": "success", "timestamp": "2026-08-05T12:18:16.388908"}
-{"event": "start", "case_id": "EC_045", "claimed_order_id": "d67b79fea59821fda4d363d337a56c3a", "timestamp": "2026-08-05T12:18:16.389337"}
-{"event": "agent", "case_id": "EC_045", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:16.421265"}
-{"event": "agent", "case_id": "EC_045", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.435673"}
-{"event": "policy", "case_id": "EC_045", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.435787"}
-{"event": "end", "case_id": "EC_045", "status": "success", "timestamp": "2026-08-05T12:18:16.436646"}
-{"event": "start", "case_id": "EC_046", "claimed_order_id": "2208f3a59d7067fe62c900692f5fdcaf", "timestamp": "2026-08-05T12:18:16.437079"}
-{"event": "agent", "case_id": "EC_046", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["fde0cc9ea29c8ccfc0a2c22256a58c71"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:16.470367"}
-{"event": "agent", "case_id": "EC_046", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.484742"}
-{"event": "policy", "case_id": "EC_046", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.484847"}
-{"event": "end", "case_id": "EC_046", "status": "success", "timestamp": "2026-08-05T12:18:16.485805"}
-{"event": "start", "case_id": "EC_047", "claimed_order_id": "b04477ada8d2ad7fa9d95358baaa785d", "timestamp": "2026-08-05T12:18:16.486193"}
-{"event": "agent", "case_id": "EC_047", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["b4ffb71f0cb1b1c3d63fad021ecf93e1"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:16.517478"}
-{"event": "agent", "case_id": "EC_047", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.533018"}
-{"event": "policy", "case_id": "EC_047", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.533125"}
-{"event": "end", "case_id": "EC_047", "status": "success", "timestamp": "2026-08-05T12:18:16.534010"}
-{"event": "start", "case_id": "EC_048", "claimed_order_id": "adc253f1977c81c2c29dc7b9dd23d538", "timestamp": "2026-08-05T12:18:16.534478"}
-{"event": "agent", "case_id": "EC_048", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["c3867b4666c7d76867627c2f7fb22e21"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:18:16.565997"}
-{"event": "agent", "case_id": "EC_048", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.589817"}
-{"event": "policy", "case_id": "EC_048", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.589999"}
-{"event": "end", "case_id": "EC_048", "status": "success", "timestamp": "2026-08-05T12:18:16.591136"}
-{"event": "start", "case_id": "EC_049", "claimed_order_id": "5b9e9502eca103a28ea22a94c65e3950", "timestamp": "2026-08-05T12:18:16.591624"}
-{"event": "agent", "case_id": "EC_049", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["955fee9216a65b617aa5c0531780ce60"], "margin_days": 7}, "timestamp": "2026-08-05T12:18:16.633938"}
-{"event": "agent", "case_id": "EC_049", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.653206"}
-{"event": "policy", "case_id": "EC_049", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.653434"}
-{"event": "end", "case_id": "EC_049", "status": "success", "timestamp": "2026-08-05T12:18:16.656077"}
-{"event": "start", "case_id": "EC_050", "claimed_order_id": "af0bbb47f125381ce9f3597dc70ef07b", "timestamp": "2026-08-05T12:18:16.656593"}
-{"event": "agent", "case_id": "EC_050", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["8b321bb669392f5163d04c59e235e066"], "margin_days": 2}, "timestamp": "2026-08-05T12:18:16.696240"}
-{"event": "agent", "case_id": "EC_050", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:18:16.712363"}
-{"event": "policy", "case_id": "EC_050", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:18:16.712490"}
-{"event": "end", "case_id": "EC_050", "status": "success", "timestamp": "2026-08-05T12:18:16.713284"}
+{"event": "start", "case_id": "EC_001", "claimed_order_id": "e2a03ccf5ea816036608b2d8c3ab8e60", "timestamp": "2026-08-05T12:36:02.573762"}
+{"event": "agent", "case_id": "EC_001", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["f7496d659ca9fdaf323c0aae84176632"], "on_time_sellers": [], "margin_days": 3}, "timestamp": "2026-08-05T12:36:02.630921"}
+{"event": "agent", "case_id": "EC_001", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:02.650229"}
+{"event": "policy", "case_id": "EC_001", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:36:02.650387"}
+{"event": "end", "case_id": "EC_001", "status": "success", "timestamp": "2026-08-05T12:36:02.651559"}
+{"event": "start", "case_id": "EC_002", "claimed_order_id": "8067c5e4834f3c0a3c8a4e921d65c5b1", "timestamp": "2026-08-05T12:36:02.651871"}
+{"event": "agent", "case_id": "EC_002", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["6973a06f484aacf400ece213dbf3d946"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:02.689819"}
+{"event": "agent", "case_id": "EC_002", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:02.707161"}
+{"event": "policy", "case_id": "EC_002", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:36:02.707286"}
+{"event": "end", "case_id": "EC_002", "status": "success", "timestamp": "2026-08-05T12:36:02.708026"}
+{"event": "start", "case_id": "EC_003", "claimed_order_id": "71303d7e93b399f5bcd537d124c0bcfa", "timestamp": "2026-08-05T12:36:02.708375"}
+{"event": "agent", "case_id": "EC_003", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:02.747259"}
+{"event": "agent", "case_id": "EC_003", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:02.766679"}
+{"event": "policy", "case_id": "EC_003", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:02.766881"}
+{"event": "end", "case_id": "EC_003", "status": "success", "timestamp": "2026-08-05T12:36:02.768133"}
+{"event": "start", "case_id": "EC_004", "claimed_order_id": "fd28a6dfe413804d0b89b7c9abf5b1f3", "timestamp": "2026-08-05T12:36:02.768751"}
+{"event": "agent", "case_id": "EC_004", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["17a053fcb14bd219540cbde0df490be0"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:02.811273"}
+{"event": "agent", "case_id": "EC_004", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:36:02.832607"}
+{"event": "policy", "case_id": "EC_004", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:36:02.832811"}
+{"event": "end", "case_id": "EC_004", "status": "success", "timestamp": "2026-08-05T12:36:02.833934"}
+{"event": "start", "case_id": "EC_005", "claimed_order_id": "9a31fd9d697e9670777501f720773fd9", "timestamp": "2026-08-05T12:36:02.834420"}
+{"event": "agent", "case_id": "EC_005", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:02.878404"}
+{"event": "agent", "case_id": "EC_005", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:36:02.900645"}
+{"event": "policy", "case_id": "EC_005", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:02.900834"}
+{"event": "end", "case_id": "EC_005", "status": "success", "timestamp": "2026-08-05T12:36:02.901917"}
+{"event": "start", "case_id": "EC_006", "claimed_order_id": "fe51b7fac3bea42115fa1c3b8973cba7", "timestamp": "2026-08-05T12:36:02.902414"}
+{"event": "agent", "case_id": "EC_006", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["85d9eb9ddc5d00ca9336a2219c97bb13"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:02.948083"}
+{"event": "agent", "case_id": "EC_006", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:36:02.970626"}
+{"event": "policy", "case_id": "EC_006", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:36:02.970756"}
+{"event": "end", "case_id": "EC_006", "status": "success", "timestamp": "2026-08-05T12:36:02.971518"}
+{"event": "start", "case_id": "EC_007", "claimed_order_id": "ded456690bcb2ffd4def86541479037f", "timestamp": "2026-08-05T12:36:02.971885"}
+{"event": "agent", "case_id": "EC_007", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:03.012341"}
+{"event": "agent", "case_id": "EC_007", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.031741"}
+{"event": "policy", "case_id": "EC_007", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.031863"}
+{"event": "end", "case_id": "EC_007", "status": "success", "timestamp": "2026-08-05T12:36:03.032914"}
+{"event": "start", "case_id": "EC_008", "claimed_order_id": "2c0032906c603dcc21cd954828fa77d0", "timestamp": "2026-08-05T12:36:03.033405"}
+{"event": "agent", "case_id": "EC_008", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": ["c1ed9e3daf6154542826a6996af0fb8c"], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:03.073837"}
+{"event": "agent", "case_id": "EC_008", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.093598"}
+{"event": "policy", "case_id": "EC_008", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.093732"}
+{"event": "end", "case_id": "EC_008", "status": "success", "timestamp": "2026-08-05T12:36:03.094564"}
+{"event": "start", "case_id": "EC_009", "claimed_order_id": "3aaee056441dcae251f360b1c71a7279", "timestamp": "2026-08-05T12:36:03.094919"}
+{"event": "agent", "case_id": "EC_009", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["c826c40d7b19f62a09e2d7c5e7295ee2"], "margin_days": 12}, "timestamp": "2026-08-05T12:36:03.135388"}
+{"event": "agent", "case_id": "EC_009", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.153484"}
+{"event": "policy", "case_id": "EC_009", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.153678"}
+{"event": "end", "case_id": "EC_009", "status": "success", "timestamp": "2026-08-05T12:36:03.155143"}
+{"event": "start", "case_id": "EC_010", "claimed_order_id": "3a119f52de09d1b2700815732def8b47", "timestamp": "2026-08-05T12:36:03.155941"}
+{"event": "agent", "case_id": "EC_010", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["891071be6ba827b591264c90c2ae8a63"], "margin_days": 8}, "timestamp": "2026-08-05T12:36:03.197130"}
+{"event": "agent", "case_id": "EC_010", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.215760"}
+{"event": "policy", "case_id": "EC_010", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.215887"}
+{"event": "end", "case_id": "EC_010", "status": "success", "timestamp": "2026-08-05T12:36:03.216649"}
+{"event": "start", "case_id": "EC_011", "claimed_order_id": "2636a02ee7de9590df86a4c24b739c49", "timestamp": "2026-08-05T12:36:03.217554"}
+{"event": "agent", "case_id": "EC_011", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:03.261156"}
+{"event": "agent", "case_id": "EC_011", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:36:03.278634"}
+{"event": "policy", "case_id": "EC_011", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.278752"}
+{"event": "end", "case_id": "EC_011", "status": "success", "timestamp": "2026-08-05T12:36:03.280004"}
+{"event": "start", "case_id": "EC_012", "claimed_order_id": "103de323ece563a1012b4b6adf5a81b2", "timestamp": "2026-08-05T12:36:03.280721"}
+{"event": "agent", "case_id": "EC_012", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["634964b17796e64304cadf1ad3050fb7"], "margin_days": 11}, "timestamp": "2026-08-05T12:36:03.322407"}
+{"event": "agent", "case_id": "EC_012", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.341126"}
+{"event": "policy", "case_id": "EC_012", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.341248"}
+{"event": "end", "case_id": "EC_012", "status": "success", "timestamp": "2026-08-05T12:36:03.342926"}
+{"event": "start", "case_id": "EC_013", "claimed_order_id": "ee234bfd26ca588915483995d811c1d0", "timestamp": "2026-08-05T12:36:03.343348"}
+{"event": "agent", "case_id": "EC_013", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:03.381604"}
+{"event": "agent", "case_id": "EC_013", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:36:03.400779"}
+{"event": "policy", "case_id": "EC_013", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.400950"}
+{"event": "end", "case_id": "EC_013", "status": "success", "timestamp": "2026-08-05T12:36:03.402003"}
+{"event": "start", "case_id": "EC_014", "claimed_order_id": "b93b079468bdf6a20fd54cf45d1e03b6", "timestamp": "2026-08-05T12:36:03.402429"}
+{"event": "agent", "case_id": "EC_014", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["cc419e0650a3c5ba77189a1882b7556a"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:03.443854"}
+{"event": "agent", "case_id": "EC_014", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.463150"}
+{"event": "policy", "case_id": "EC_014", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.463295"}
+{"event": "end", "case_id": "EC_014", "status": "success", "timestamp": "2026-08-05T12:36:03.464254"}
+{"event": "start", "case_id": "EC_015", "claimed_order_id": "c504f1f5fd54cc8398d57dc0da49de01", "timestamp": "2026-08-05T12:36:03.464672"}
+{"event": "agent", "case_id": "EC_015", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:03.503530"}
+{"event": "agent", "case_id": "EC_015", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.521419"}
+{"event": "policy", "case_id": "EC_015", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.521530"}
+{"event": "end", "case_id": "EC_015", "status": "success", "timestamp": "2026-08-05T12:36:03.522409"}
+{"event": "start", "case_id": "EC_016", "claimed_order_id": "a88edef387e2a7e457695664bf0ddfc0", "timestamp": "2026-08-05T12:36:03.523410"}
+{"event": "agent", "case_id": "EC_016", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["9646c3513289980f17226a2fc4720dbd"], "margin_days": 10}, "timestamp": "2026-08-05T12:36:03.563776"}
+{"event": "agent", "case_id": "EC_016", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.582989"}
+{"event": "policy", "case_id": "EC_016", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.583124"}
+{"event": "end", "case_id": "EC_016", "status": "success", "timestamp": "2026-08-05T12:36:03.583951"}
+{"event": "start", "case_id": "EC_017", "claimed_order_id": "dd6ee4d96f0f3cf1432c3b82818e0387", "timestamp": "2026-08-05T12:36:03.584404"}
+{"event": "agent", "case_id": "EC_017", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["1dfe5347016252a7884b694d4f10f5c4"], "margin_days": 4}, "timestamp": "2026-08-05T12:36:03.627586"}
+{"event": "agent", "case_id": "EC_017", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.646541"}
+{"event": "policy", "case_id": "EC_017", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.646683"}
+{"event": "end", "case_id": "EC_017", "status": "success", "timestamp": "2026-08-05T12:36:03.647870"}
+{"event": "start", "case_id": "EC_018", "claimed_order_id": "97c8513f2504aa8ec05534307a703dea", "timestamp": "2026-08-05T12:36:03.648709"}
+{"event": "agent", "case_id": "EC_018", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["7d76b645482be4a332374e8223836592"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:03.692244"}
+{"event": "agent", "case_id": "EC_018", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.711867"}
+{"event": "policy", "case_id": "EC_018", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.712007"}
+{"event": "end", "case_id": "EC_018", "status": "success", "timestamp": "2026-08-05T12:36:03.713091"}
+{"event": "start", "case_id": "EC_019", "claimed_order_id": "31f935babbc97f5990e0ffd128e19541", "timestamp": "2026-08-05T12:36:03.713493"}
+{"event": "agent", "case_id": "EC_019", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:03.752686"}
+{"event": "agent", "case_id": "EC_019", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:36:03.771250"}
+{"event": "policy", "case_id": "EC_019", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.771389"}
+{"event": "end", "case_id": "EC_019", "status": "success", "timestamp": "2026-08-05T12:36:03.772251"}
+{"event": "start", "case_id": "EC_020", "claimed_order_id": "96087ef44ca9abdbc4c372a3dd3c859f", "timestamp": "2026-08-05T12:36:03.772977"}
+{"event": "agent", "case_id": "EC_020", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["7813ea3ebd9411dc600b4dd01f7a97b9"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:03.817760"}
+{"event": "agent", "case_id": "EC_020", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.836778"}
+{"event": "policy", "case_id": "EC_020", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.836920"}
+{"event": "end", "case_id": "EC_020", "status": "success", "timestamp": "2026-08-05T12:36:03.837969"}
+{"event": "start", "case_id": "EC_021", "claimed_order_id": "13d341318c77969f10d77e1382957542", "timestamp": "2026-08-05T12:36:03.838317"}
+{"event": "agent", "case_id": "EC_021", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:03.876555"}
+{"event": "agent", "case_id": "EC_021", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.895538"}
+{"event": "policy", "case_id": "EC_021", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.895656"}
+{"event": "end", "case_id": "EC_021", "status": "success", "timestamp": "2026-08-05T12:36:03.896391"}
+{"event": "start", "case_id": "EC_022", "claimed_order_id": "1f7565efbb90c33b80f467d6a75332c5", "timestamp": "2026-08-05T12:36:03.896752"}
+{"event": "agent", "case_id": "EC_022", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["02d35243ea2e497335cd0f076b45675d"], "on_time_sellers": [], "margin_days": 5}, "timestamp": "2026-08-05T12:36:03.935705"}
+{"event": "agent", "case_id": "EC_022", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:03.954718"}
+{"event": "policy", "case_id": "EC_022", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:36:03.954849"}
+{"event": "end", "case_id": "EC_022", "status": "success", "timestamp": "2026-08-05T12:36:03.955613"}
+{"event": "start", "case_id": "EC_023", "claimed_order_id": "5fba7c57daf631028d2a584c52799e24", "timestamp": "2026-08-05T12:36:03.956023"}
+{"event": "agent", "case_id": "EC_023", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["1f50f920176fa81dab994f9023523100"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.000456"}
+{"event": "agent", "case_id": "EC_023", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.021328"}
+{"event": "policy", "case_id": "EC_023", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.021451"}
+{"event": "end", "case_id": "EC_023", "status": "success", "timestamp": "2026-08-05T12:36:04.022250"}
+{"event": "start", "case_id": "EC_024", "claimed_order_id": "d8716a985f69a46751cc046b0fea0d98", "timestamp": "2026-08-05T12:36:04.023148"}
+{"event": "agent", "case_id": "EC_024", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.066983"}
+{"event": "agent", "case_id": "EC_024", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:36:04.088222"}
+{"event": "policy", "case_id": "EC_024", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.088344"}
+{"event": "end", "case_id": "EC_024", "status": "success", "timestamp": "2026-08-05T12:36:04.089205"}
+{"event": "start", "case_id": "EC_025", "claimed_order_id": "e06ff711ddcab05c3651a9b1bb003950", "timestamp": "2026-08-05T12:36:04.089584"}
+{"event": "agent", "case_id": "EC_025", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["391fc6631aebcf3004804e51b40bcf1e"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.135459"}
+{"event": "agent", "case_id": "EC_025", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.153772"}
+{"event": "policy", "case_id": "EC_025", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.153899"}
+{"event": "end", "case_id": "EC_025", "status": "success", "timestamp": "2026-08-05T12:36:04.155507"}
+{"event": "start", "case_id": "EC_026", "claimed_order_id": "966f96af9d189dc428ff04ebbca821b8", "timestamp": "2026-08-05T12:36:04.156052"}
+{"event": "agent", "case_id": "EC_026", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.200286"}
+{"event": "agent", "case_id": "EC_026", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.219797"}
+{"event": "policy", "case_id": "EC_026", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.219959"}
+{"event": "end", "case_id": "EC_026", "status": "success", "timestamp": "2026-08-05T12:36:04.220918"}
+{"event": "start", "case_id": "EC_027", "claimed_order_id": "2f346d92b11fcc7c342b3392b174cf3b", "timestamp": "2026-08-05T12:36:04.221361"}
+{"event": "agent", "case_id": "EC_027", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.262279"}
+{"event": "agent", "case_id": "EC_027", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:36:04.281889"}
+{"event": "policy", "case_id": "EC_027", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.282081"}
+{"event": "end", "case_id": "EC_027", "status": "success", "timestamp": "2026-08-05T12:36:04.282844"}
+{"event": "start", "case_id": "EC_028", "claimed_order_id": "80f0181edc2f4a5bd3384a3c39a83cee", "timestamp": "2026-08-05T12:36:04.283179"}
+{"event": "agent", "case_id": "EC_028", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.324399"}
+{"event": "agent", "case_id": "EC_028", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:36:04.342445"}
+{"event": "policy", "case_id": "EC_028", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.342860"}
+{"event": "end", "case_id": "EC_028", "status": "success", "timestamp": "2026-08-05T12:36:04.343782"}
+{"event": "start", "case_id": "EC_029", "claimed_order_id": "5c932e0a181410b67c77daaed30991af", "timestamp": "2026-08-05T12:36:04.344183"}
+{"event": "agent", "case_id": "EC_029", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["88460e8ebdecbfecb5f9601833981930"], "on_time_sellers": [], "margin_days": 2}, "timestamp": "2026-08-05T12:36:04.385370"}
+{"event": "agent", "case_id": "EC_029", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.402237"}
+{"event": "policy", "case_id": "EC_029", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.402361"}
+{"event": "end", "case_id": "EC_029", "status": "success", "timestamp": "2026-08-05T12:36:04.403159"}
+{"event": "start", "case_id": "EC_030", "claimed_order_id": "405be8487a7fde1db0bc31ad6b08050a", "timestamp": "2026-08-05T12:36:04.403495"}
+{"event": "agent", "case_id": "EC_030", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["cfb1a033743668a192316f3c6d1d2671"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.442158"}
+{"event": "agent", "case_id": "EC_030", "agent": "PaymentAgent", "action": "checked", "data": {"count": 3, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.461843"}
+{"event": "policy", "case_id": "EC_030", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.461962"}
+{"event": "end", "case_id": "EC_030", "status": "success", "timestamp": "2026-08-05T12:36:04.462863"}
+{"event": "start", "case_id": "EC_031", "claimed_order_id": "4274ff4a5df607e75b32b80e2f8eda3f", "timestamp": "2026-08-05T12:36:04.463241"}
+{"event": "agent", "case_id": "EC_031", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["88ae906ea2acf6971f26c3e8b7cb4357"], "margin_days": 2}, "timestamp": "2026-08-05T12:36:04.506817"}
+{"event": "agent", "case_id": "EC_031", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.525690"}
+{"event": "policy", "case_id": "EC_031", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.525838"}
+{"event": "end", "case_id": "EC_031", "status": "success", "timestamp": "2026-08-05T12:36:04.528142"}
+{"event": "start", "case_id": "EC_032", "claimed_order_id": "c4dad201936ed30eef3c94fafa59ed6e", "timestamp": "2026-08-05T12:36:04.528573"}
+{"event": "agent", "case_id": "EC_032", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["1a932caad4f9d804097d7f8e615baed1"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.568453"}
+{"event": "agent", "case_id": "EC_032", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.587461"}
+{"event": "policy", "case_id": "EC_032", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.587624"}
+{"event": "end", "case_id": "EC_032", "status": "success", "timestamp": "2026-08-05T12:36:04.589993"}
+{"event": "start", "case_id": "EC_033", "claimed_order_id": "a5c8f3a11dcb9bd9b0acdfb8101dfdc8", "timestamp": "2026-08-05T12:36:04.590376"}
+{"event": "agent", "case_id": "EC_033", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["1025f0e2d44d7041d6cf58b6550e0bfa"], "on_time_sellers": [], "margin_days": 7}, "timestamp": "2026-08-05T12:36:04.632844"}
+{"event": "agent", "case_id": "EC_033", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.652524"}
+{"event": "policy", "case_id": "EC_033", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.652649"}
+{"event": "end", "case_id": "EC_033", "status": "success", "timestamp": "2026-08-05T12:36:04.653461"}
+{"event": "start", "case_id": "EC_034", "claimed_order_id": "973acef56bf70feefa8264d4e9f300fc", "timestamp": "2026-08-05T12:36:04.653841"}
+{"event": "agent", "case_id": "EC_034", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["66922902710d126a0e7d26b0e3805106"], "on_time_sellers": [], "margin_days": 6}, "timestamp": "2026-08-05T12:36:04.694972"}
+{"event": "agent", "case_id": "EC_034", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.715473"}
+{"event": "policy", "case_id": "EC_034", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.715595"}
+{"event": "end", "case_id": "EC_034", "status": "success", "timestamp": "2026-08-05T12:36:04.718178"}
+{"event": "start", "case_id": "EC_035", "claimed_order_id": "2478ddd1d1395639b71cf0d498d8dbf6", "timestamp": "2026-08-05T12:36:04.718884"}
+{"event": "agent", "case_id": "EC_035", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["4e17c65a516f69d023a2ae78b84f28d6"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.758193"}
+{"event": "agent", "case_id": "EC_035", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.778570"}
+{"event": "policy", "case_id": "EC_035", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.778682"}
+{"event": "end", "case_id": "EC_035", "status": "success", "timestamp": "2026-08-05T12:36:04.781753"}
+{"event": "start", "case_id": "EC_036", "claimed_order_id": "c609f82bcf7a90292a5940205ebd7e93", "timestamp": "2026-08-05T12:36:04.782322"}
+{"event": "agent", "case_id": "EC_036", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.820158"}
+{"event": "agent", "case_id": "EC_036", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": false}, "timestamp": "2026-08-05T12:36:04.839319"}
+{"event": "policy", "case_id": "EC_036", "primary_issue": "unavailable_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.839433"}
+{"event": "end", "case_id": "EC_036", "status": "success", "timestamp": "2026-08-05T12:36:04.840489"}
+{"event": "start", "case_id": "EC_037", "claimed_order_id": "b90e46cdc30adec2f0fa041984341170", "timestamp": "2026-08-05T12:36:04.840857"}
+{"event": "agent", "case_id": "EC_037", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["1ca7077d890b907f89be8c954a02686a"], "on_time_sellers": [], "margin_days": 4}, "timestamp": "2026-08-05T12:36:04.881353"}
+{"event": "agent", "case_id": "EC_037", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.900567"}
+{"event": "policy", "case_id": "EC_037", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.900712"}
+{"event": "end", "case_id": "EC_037", "status": "success", "timestamp": "2026-08-05T12:36:04.903031"}
+{"event": "start", "case_id": "EC_038", "claimed_order_id": "6b27933c6a46e3d66203137ad1fdb678", "timestamp": "2026-08-05T12:36:04.903468"}
+{"event": "agent", "case_id": "EC_038", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["46dc3b2cc0980fb8ec44634e21d2718e"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:04.943262"}
+{"event": "agent", "case_id": "EC_038", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:36:04.961949"}
+{"event": "policy", "case_id": "EC_038", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:36:04.962094"}
+{"event": "end", "case_id": "EC_038", "status": "success", "timestamp": "2026-08-05T12:36:04.964541"}
+{"event": "start", "case_id": "EC_039", "claimed_order_id": "44a03ff139461361ec4cce7949663c2f", "timestamp": "2026-08-05T12:36:04.964985"}
+{"event": "agent", "case_id": "EC_039", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["da8622b14eb17ae2831f4ac5b9dab84a"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:05.005581"}
+{"event": "agent", "case_id": "EC_039", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.026705"}
+{"event": "policy", "case_id": "EC_039", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.026867"}
+{"event": "end", "case_id": "EC_039", "status": "success", "timestamp": "2026-08-05T12:36:05.029523"}
+{"event": "start", "case_id": "EC_040", "claimed_order_id": "11bc240af3d9e1f77218715480a65b77", "timestamp": "2026-08-05T12:36:05.030508"}
+{"event": "agent", "case_id": "EC_040", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["fe2032dab1a61af8794248c8196565c9"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:05.072756"}
+{"event": "agent", "case_id": "EC_040", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.091718"}
+{"event": "policy", "case_id": "EC_040", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.092187"}
+{"event": "end", "case_id": "EC_040", "status": "success", "timestamp": "2026-08-05T12:36:05.095320"}
+{"event": "start", "case_id": "EC_041", "claimed_order_id": "64a8b3b4c19751b51d211deb32fdc67b", "timestamp": "2026-08-05T12:36:05.095817"}
+{"event": "agent", "case_id": "EC_041", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:05.137892"}
+{"event": "agent", "case_id": "EC_041", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.158024"}
+{"event": "policy", "case_id": "EC_041", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.158146"}
+{"event": "end", "case_id": "EC_041", "status": "success", "timestamp": "2026-08-05T12:36:05.160351"}
+{"event": "start", "case_id": "EC_042", "claimed_order_id": "8a5fc33c79bf3f4d9bbcc3dceb6b67c4", "timestamp": "2026-08-05T12:36:05.160710"}
+{"event": "agent", "case_id": "EC_042", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["6bbcb8924baf70b7fe2fe2097e8cd407"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:05.201491"}
+{"event": "agent", "case_id": "EC_042", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.221414"}
+{"event": "policy", "case_id": "EC_042", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.221537"}
+{"event": "end", "case_id": "EC_042", "status": "success", "timestamp": "2026-08-05T12:36:05.224230"}
+{"event": "start", "case_id": "EC_043", "claimed_order_id": "3ef6bcdda6193f8657168ba7e8b3e948", "timestamp": "2026-08-05T12:36:05.224967"}
+{"event": "agent", "case_id": "EC_043", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["46dc3b2cc0980fb8ec44634e21d2718e"], "on_time_sellers": [], "margin_days": 6}, "timestamp": "2026-08-05T12:36:05.266735"}
+{"event": "agent", "case_id": "EC_043", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.284496"}
+{"event": "policy", "case_id": "EC_043", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.284628"}
+{"event": "end", "case_id": "EC_043", "status": "success", "timestamp": "2026-08-05T12:36:05.287386"}
+{"event": "start", "case_id": "EC_044", "claimed_order_id": "d671370d11048a2dab56335d3d91823e", "timestamp": "2026-08-05T12:36:05.288018"}
+{"event": "agent", "case_id": "EC_044", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": ["4a3ca9315b744ce9f8e9374361493884"], "on_time_sellers": [], "margin_days": 10}, "timestamp": "2026-08-05T12:36:05.327458"}
+{"event": "agent", "case_id": "EC_044", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.347504"}
+{"event": "policy", "case_id": "EC_044", "primary_issue": "late_delivery_seller", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.347645"}
+{"event": "end", "case_id": "EC_044", "status": "success", "timestamp": "2026-08-05T12:36:05.348612"}
+{"event": "start", "case_id": "EC_045", "claimed_order_id": "d67b79fea59821fda4d363d337a56c3a", "timestamp": "2026-08-05T12:36:05.349772"}
+{"event": "agent", "case_id": "EC_045", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": [], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:05.390928"}
+{"event": "agent", "case_id": "EC_045", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.410157"}
+{"event": "policy", "case_id": "EC_045", "primary_issue": "canceled_order_paid", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.410279"}
+{"event": "end", "case_id": "EC_045", "status": "success", "timestamp": "2026-08-05T12:36:05.411072"}
+{"event": "start", "case_id": "EC_046", "claimed_order_id": "2208f3a59d7067fe62c900692f5fdcaf", "timestamp": "2026-08-05T12:36:05.412253"}
+{"event": "agent", "case_id": "EC_046", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["fde0cc9ea29c8ccfc0a2c22256a58c71"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:05.450534"}
+{"event": "agent", "case_id": "EC_046", "agent": "PaymentAgent", "action": "checked", "data": {"count": 2, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.469420"}
+{"event": "policy", "case_id": "EC_046", "primary_issue": "valid_split_payment", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.469544"}
+{"event": "end", "case_id": "EC_046", "status": "success", "timestamp": "2026-08-05T12:36:05.471782"}
+{"event": "start", "case_id": "EC_047", "claimed_order_id": "b04477ada8d2ad7fa9d95358baaa785d", "timestamp": "2026-08-05T12:36:05.472243"}
+{"event": "agent", "case_id": "EC_047", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["b4ffb71f0cb1b1c3d63fad021ecf93e1"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:05.512931"}
+{"event": "agent", "case_id": "EC_047", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.533791"}
+{"event": "policy", "case_id": "EC_047", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.533906"}
+{"event": "end", "case_id": "EC_047", "status": "success", "timestamp": "2026-08-05T12:36:05.534636"}
+{"event": "start", "case_id": "EC_048", "claimed_order_id": "adc253f1977c81c2c29dc7b9dd23d538", "timestamp": "2026-08-05T12:36:05.534950"}
+{"event": "agent", "case_id": "EC_048", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": false, "late_sellers": [], "on_time_sellers": ["c3867b4666c7d76867627c2f7fb22e21"], "margin_days": 0.0}, "timestamp": "2026-08-05T12:36:05.575452"}
+{"event": "agent", "case_id": "EC_048", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.595780"}
+{"event": "policy", "case_id": "EC_048", "primary_issue": "unsupported_late_claim", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.595930"}
+{"event": "end", "case_id": "EC_048", "status": "success", "timestamp": "2026-08-05T12:36:05.596713"}
+{"event": "start", "case_id": "EC_049", "claimed_order_id": "5b9e9502eca103a28ea22a94c65e3950", "timestamp": "2026-08-05T12:36:05.597092"}
+{"event": "agent", "case_id": "EC_049", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["955fee9216a65b617aa5c0531780ce60"], "margin_days": 7}, "timestamp": "2026-08-05T12:36:05.639149"}
+{"event": "agent", "case_id": "EC_049", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.658586"}
+{"event": "policy", "case_id": "EC_049", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.658718"}
+{"event": "end", "case_id": "EC_049", "status": "success", "timestamp": "2026-08-05T12:36:05.661400"}
+{"event": "start", "case_id": "EC_050", "claimed_order_id": "af0bbb47f125381ce9f3597dc70ef07b", "timestamp": "2026-08-05T12:36:05.662474"}
+{"event": "agent", "case_id": "EC_050", "agent": "DeliveryAgent", "action": "analyzed", "data": {"late": true, "late_sellers": [], "on_time_sellers": ["8b321bb669392f5163d04c59e235e066"], "margin_days": 2}, "timestamp": "2026-08-05T12:36:05.704162"}
+{"event": "agent", "case_id": "EC_050", "agent": "PaymentAgent", "action": "checked", "data": {"count": 1, "reconciled": true}, "timestamp": "2026-08-05T12:36:05.722533"}
+{"event": "policy", "case_id": "EC_050", "primary_issue": "late_delivery_logistics", "confidence": 1.0, "timestamp": "2026-08-05T12:36:05.722665"}
+{"event": "end", "case_id": "EC_050", "status": "success", "timestamp": "2026-08-05T12:36:05.725209"}
