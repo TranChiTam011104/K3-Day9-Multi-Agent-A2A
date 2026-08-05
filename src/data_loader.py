@@ -92,6 +92,8 @@ def get_order_with_details(order_id: str) -> Dict[str, Any]:
         return {"error": f"Order {order_id} not found"}
 
     order = order_row.iloc[0].to_dict()
+    if "order_status" in order and pd.notna(order["order_status"]):
+        order["order_status"] = str(order["order_status"]).strip().lower()
 
     # Get items
     items = order_items[order_items["order_id"] == order_id]
@@ -142,6 +144,11 @@ def analyze_delivery_timing(order_id: str) -> Dict[str, Any]:
 
     order = order_data["order"]
     items = pd.DataFrame(order_data["items"])
+    
+    # Parse dates
+    order_delivered_carrier = pd.to_datetime(order.get("order_delivered_carrier_date"), errors="coerce")
+    order_estimated_delivery = pd.to_datetime(order.get("order_estimated_delivery_date"), errors="coerce")
+    order_delivered_customer = pd.to_datetime(order.get("order_delivered_customer_date"), errors="coerce")
 
     result = {
         "order_id": order_id,
@@ -159,28 +166,30 @@ def analyze_delivery_timing(order_id: str) -> Dict[str, Any]:
         # Get max shipping limit per seller
         for _, item in items.iterrows():
             seller_id = item["seller_id"]
-            shipping_limit = item["shipping_limit_date"]
-            delivered_carrier = order.get("order_delivered_carrier_date")
+            shipping_limit = pd.to_datetime(item["shipping_limit_date"], errors="coerce")
 
             result["shipping_limits"].append({
                 "seller_id": seller_id,
-                "shipping_limit_date": shipping_limit,
-                "order_delivered_carrier_date": delivered_carrier,
+                "shipping_limit_date": item["shipping_limit_date"],
+                "order_delivered_carrier_date": order.get("order_delivered_carrier_date"),
             })
 
             # Check if seller handed off late
-            if pd.notna(shipping_limit) and pd.notna(delivered_carrier):
-                if delivered_carrier > shipping_limit:
+            if pd.notna(shipping_limit) and pd.notna(order_delivered_carrier):
+                if order_delivered_carrier > shipping_limit:
                     result["late_sellers"].append(seller_id)
                 else:
                     result["on_time_sellers"].append(seller_id)
 
+    # Ensure sellers are unique in lists
+    result["late_sellers"] = list(set(result["late_sellers"]))
+    # on_time_sellers should not contain sellers who are also in late_sellers
+    result["on_time_sellers"] = list(set(result["on_time_sellers"]) - set(result["late_sellers"]))
+
     # Check if delivery is late (compare with estimated)
-    if pd.notna(order.get("order_estimated_delivery_date")) and pd.notna(
-        order.get("order_delivered_customer_date")
-    ):
+    if pd.notna(order_estimated_delivery) and pd.notna(order_delivered_customer):
         result["is_late_delivery"] = (
-            order["order_delivered_customer_date"] > order["order_estimated_delivery_date"]
+            order_delivered_customer > order_estimated_delivery
         )
 
     return result
