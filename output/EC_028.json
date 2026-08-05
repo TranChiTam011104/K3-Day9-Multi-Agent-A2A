@@ -12,7 +12,7 @@
     "item_ids": [],
     "seller_ids": [],
     "payment_ids": [
-      "80f0181edc2f4a5bd3384a3c39a83cee:1"
+      "payment:80f0181edc2f4a5bd3384a3c39a83cee:1"
     ]
   },
   "root_cause_analysis": {

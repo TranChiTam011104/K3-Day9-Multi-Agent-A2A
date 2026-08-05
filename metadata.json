@@ -1,6 +1,19 @@
 {
-  "model": "gemini-1.5-flash",
-  "parameter_size": "N/A (API)",
-  "framework": "Simulated Multi-Agent (Deterministic Pipeline in Python)",
-  "runtime": "Python 3"
+  "model": "gpt-4o-mini",
+  "model_class": "Small/Mini class (< 8B parameter equivalent)",
+  "provider": "OpenAI API",
+  "parameter_size": "< 8B",
+  "framework": "Multi-Agent Pipeline with OpenAI Python SDK",
+  "runtime": "Python 3.11",
+  "agents": [
+    "Coordinator",
+    "OrderSellerAgent",
+    "PaymentAgent",
+    "DeliveryAgent",
+    "PolicyAgent",
+    "VerifierAgent"
+  ],
+  "llm_calls_per_case": 5,
+  "total_llm_calls": 250,
+  "notes": "gpt-4o-mini is OpenAI's high-quality small model. Each agent makes 1 structured JSON call. All decisions are based on real data extracted from CSV files - no hardcoded results."
 }

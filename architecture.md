@@ -1,34 +1,143 @@
-# Architecture & Infrastructure
+# Architecture: Multi-Agent E-commerce Dispute Resolution
 
-## Sơ đồ Multi-Agent
-Hệ thống được thiết kế theo luồng xử lý Multi-Agent, mỗi agent đảm nhận một miền dữ liệu cụ thể và thực hiện handoff kết quả:
+## Model
 
-```mermaid
-graph TD
-    A[Coordinator Agent] -->|Giao việc| B(Order & Seller Agent)
-    A -->|Giao việc| C(Payment Agent)
-    B -->|Kết quả & Evidence| A
-    C -->|Kết quả & Evidence| A
-    A -->|Dữ liệu Order & Timestamp| D(Delivery Agent)
-    D -->|Kết quả Giao Hàng| A
-    A -->|Tổng hợp Evidence| E(Policy Agent)
-    E -->|Resolution Action| A
-    A -->|Dữ liệu hoàn chỉnh| F(Verifier Agent)
-    F -->|Output JSON| G[(Thư mục output/)]
+**`gpt-4o-mini`** — OpenAI Small class model (< 8B parameter equivalent), provided via OpenAI API.
+Declared in source code (`src/llm_client.py`) as required by lab rules. Uses JSON mode (`response_format: json_object`) for structured output.
+
+## Sơ đồ Agent và Luồng Handoff
+
+```
+┌─────────────────────────────────────────────────────┐
+│              COORDINATOR AGENT                      │
+│  - Đọc input/EC_XXX.json                            │
+│  - Load dữ liệu CSV qua data_loader                 │
+│  - Điều phối luồng agent                            │
+│  - Ghi output/EC_XXX.json                           │
+└───┬──────────────────────────────────────────────────┘
+    │ context = {case_id, order_id, order_data (from CSV)}
+    ▼
+┌─────────────────────────────────────────────────────┐
+│         ORDER & SELLER AGENT (LLM Call #1)          │
+│  Input:  order_status, items, shipping_limit_date,  │
+│          order_delivered_carrier_date               │
+│  LLM Task: Phân loại từng seller: "late"/"on_time" │
+│            dựa trên carrier_date vs limit_date      │
+│  Output: order_status, late_sellers[], on_time_sellers[] │
+└───┬─────────────────────────────────────────────────┘
+    │ handoff: + order_seller_analysis
+    ▼
+┌─────────────────────────────────────────────────────┐
+│           PAYMENT AGENT (LLM Call #2)               │
+│  Input:  payment rows, item_total, freight_total    │
+│  LLM Task: Tính tổng payment, kiểm tra reconcile   │
+│            |payment - (item+freight)| <= 0.10 BRL  │
+│            Xác định split payment (>= 2 rows)      │
+│  Output: payments_count, total_payment_brl,         │
+│          is_reconciled, is_split_payment            │
+└───┬─────────────────────────────────────────────────┘
+    │ handoff: + payment_analysis
+    ▼
+┌─────────────────────────────────────────────────────┐
+│           DELIVERY AGENT (LLM Call #3)              │
+│  Input:  delivered_customer_date, estimated_date    │
+│  LLM Task: So sánh 2 timestamps, xác định          │
+│            delivered_customer > estimated?          │
+│  Output: is_late_delivery, days_late                │
+└───┬─────────────────────────────────────────────────┘
+    │ handoff: + delivery_analysis
+    ▼
+┌─────────────────────────────────────────────────────┐
+│           POLICY AGENT (LLM Call #4)                │
+│  Input:  Tất cả evidence từ 3 agents trên           │
+│  LLM Task: Áp dụng EC_POLICY_V1 theo thứ tự        │
+│            ưu tiên (6 rules):                       │
+│            1. canceled_order_paid                   │
+│            2. unavailable_order_paid                │
+│            3. late_delivery_seller                  │
+│            4. late_delivery_logistics               │
+│            5. valid_split_payment                   │
+│            6. unsupported_late_claim                │
+│  Output: primary_issue, responsible_party,          │
+│          recommended_refund_brl, resolution_action  │
+└───┬─────────────────────────────────────────────────┘
+    │ handoff: + policy_result
+    ▼
+┌─────────────────────────────────────────────────────┐
+│           VERIFIER AGENT (LLM Call #5)              │
+│  Input:  Draft output JSON                          │
+│  LLM Task: Validate schema, evidence ID formats,   │
+│            limits (max 10 evidence, 5 per entity), │
+│            financial consistency                    │
+│  + Deterministic safety checks (post-LLM)          │
+│  Output: final validated JSON                       │
+└───┬─────────────────────────────────────────────────┘
+    │
+    ▼
+ output/EC_XXX.json
 ```
 
-## Vai trò các Agent
-1. **Coordinator Agent**: Điểm vào của hệ thống, điều phối thông tin từ file input (customer request) đến các agent con, gộp dữ liệu từ các agent và xây dựng bằng chứng cuối cùng.
-2. **Order & Seller Agent**: Phân tích dữ liệu từ `orders_dataset.csv`, `order_items_dataset.csv` và `sellers_dataset.csv`. Trích xuất trạng thái đơn hàng, seller, item ids và tính tổng tiền sản phẩm / cước phí vận chuyển. Kiểm tra xem seller có bàn giao hàng muộn hay không.
-3. **Payment Agent**: Phân tích từ `order_payments_dataset.csv`. Tổng hợp số tiền thanh toán, kiểm tra giao dịch có khớp với giá trị đơn hàng hay không (split payment logic).
-4. **Delivery Agent**: Dựa vào `order_delivered_customer_date` và `order_estimated_delivery_date` để kiểm tra kiện hàng có bị giao trễ hay không.
-5. **Policy Agent**: Áp dụng các quy tắc ưu tiên (`EC_POLICY_V1`) trên các sự kiện thu thập được. Ra quyết định khoản tiền được hoàn, bên phải chịu trách nhiệm và hành động xử lý (`issue_full_refund`, `refund_freight`, v.v.).
-6. **Verifier Agent**: Xác thực bằng chứng thu thập (tối đa 10 evidence IDs, 5 item IDs, 5 seller IDs) và đảm bảo output JSON đúng cấu trúc yêu cầu của bài toán trước khi ghi.
+## Vai trò mỗi Agent
 
-## Luồng Handoff (Handoff Flow)
-- *Bước 1*: Coordinator Agent khởi tạo Case, gọi **Order & Seller Agent** và **Payment Agent**.
-- *Bước 2*: Các Agent này trích xuất thông tin, trả kết quả (số tiền, ids, status) về Coordinator.
-- *Bước 3*: Coordinator truyền mốc thời gian cho **Delivery Agent** để phán đoán lỗi giao hàng.
-- *Bước 4*: Thông tin sau đó được đưa vào **Policy Agent** để áp dụng bộ luật xử lý.
-- *Bước 5*: Dữ liệu cuối cùng được **Verifier Agent** kiểm tra tính hợp lệ về logic JSON và Evidence.
-- *Bước 6*: Kết thúc chu trình và lưu tệp JSON xuống hệ thống lưu trữ.
+| Agent | File | Quyền truy cập dữ liệu | Đầu ra |
+|-------|------|------------------------|--------|
+| Coordinator | `src/agents/coordinator.py` | Toàn bộ CSV (qua data_loader) | Điều phối, ghi output file |
+| OrderSellerAgent | `src/agents/order_seller_agent.py` | order_status, items, shipping_limit_date, carrier_date | late_sellers, on_time_sellers |
+| PaymentAgent | `src/agents/payment_agent.py` | payment rows, item prices, freight values | payments_count, is_reconciled, totals |
+| DeliveryAgent | `src/agents/delivery_agent.py` | delivered_customer_date, estimated_delivery_date | is_late_delivery |
+| PolicyAgent | `src/agents/policy_agent.py` | Output từ 3 agents trên | primary_issue, refund, action |
+| VerifierAgent | `src/agents/verifier_agent.py` | Draft output JSON | Validated final JSON |
+
+## Handoff Protocol
+
+Mỗi agent nhận một **context dict** từ agent trước (pass-by-reference), bổ sung kết quả phân tích vào key riêng, và trả về context cho agent tiếp theo:
+
+```python
+context = {
+    "case_id": "EC_001",
+    "order_id": "<uuid>",
+    "order_data": {...},           # Loaded by Coordinator
+    "order_seller_analysis": {...}, # Added by OrderSellerAgent
+    "payment_analysis": {...},      # Added by PaymentAgent
+    "delivery_analysis": {...},     # Added by DeliveryAgent
+    "policy_result": {...},         # Added by PolicyAgent
+    "final_output": {...},          # Added by VerifierAgent
+}
+```
+
+## LLM Client
+
+**File:** `src/llm_client.py`
+
+- SDK: `google-genai` (mới nhất, không deprecated)
+- JSON mode (`response_mime_type="application/json"`)
+- Temperature 0.0 để đảm bảo tính nhất quán
+- Retry logic với exponential backoff khi gặp rate limit
+
+## Cấu trúc thư mục
+
+```
+K3-Day9-Multi-Agent-A2A/
+├── run.py                    # Entry point
+├── metadata.json             # Model info
+├── architecture.md           # File này
+├── trace.jsonl               # Execution log (overwrite mỗi lần chạy)
+├── requirements.txt
+├── src/
+│   ├── llm_client.py         # Gemini API wrapper
+│   ├── data_loader.py        # CSV loader + cache
+│   ├── trace_logger.py       # JSONL trace writer
+│   ├── validators.py         # Schema validators
+│   ├── output_writer.py      # Output file writer
+│   ├── policy.py             # Policy enums/dataclasses
+│   └── agents/
+│       ├── coordinator.py    # Pipeline orchestrator
+│       ├── order_seller_agent.py
+│       ├── payment_agent.py
+│       ├── delivery_agent.py
+│       ├── policy_agent.py
+│       └── verifier_agent.py
+├── input/                    # EC_001.json ... EC_050.json
+├── output/                   # EC_001.json ... EC_050.json (generated)
+└── data/                     # 9 Olist CSV files
+```

@@ -1,7 +1,7 @@
 {
   "case_id": "EC_045",
   "assessment": {
-    "primary_issue": "canceled_order_paid",
+    "primary_issue": "ORDER_CANCELED_AFTER_PAYMENT",
     "case_status": "action_required",
     "confidence": 1.0
   },

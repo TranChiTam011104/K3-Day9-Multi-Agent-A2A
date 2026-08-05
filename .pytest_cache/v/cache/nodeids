@@ -1,0 +1,23 @@
+[
+  "tests/test_person_3.py::test_all_15_cases_parametrized[ORD_01-expected_late0-expected_on_time0]",
+  "tests/test_person_3.py::test_all_15_cases_parametrized[ORD_02-expected_late1-expected_on_time1]",
+  "tests/test_person_3.py::test_all_15_cases_parametrized[ORD_03-expected_late2-expected_on_time2]",
+  "tests/test_person_3.py::test_all_15_cases_parametrized[ORD_04-expected_late3-expected_on_time3]",
+  "tests/test_person_3.py::test_all_15_cases_parametrized[ORD_05-expected_late4-expected_on_time4]",
+  "tests/test_person_3.py::test_all_15_cases_parametrized[ORD_06-expected_late5-expected_on_time5]",
+  "tests/test_person_3.py::test_all_15_cases_parametrized[ORD_07-expected_late6-expected_on_time6]",
+  "tests/test_person_3.py::test_all_15_cases_parametrized[ORD_08-expected_late7-expected_on_time7]",
+  "tests/test_person_3.py::test_all_15_cases_parametrized[ORD_09-expected_late8-expected_on_time8]",
+  "tests/test_person_3.py::test_carrier_after_limit",
+  "tests/test_person_3.py::test_carrier_equal_limit",
+  "tests/test_person_3.py::test_evidence_unique",
+  "tests/test_person_3.py::test_freight_total_multiple_items_and_no_double_join",
+  "tests/test_person_3.py::test_missing_carrier_date",
+  "tests/test_person_3.py::test_missing_order",
+  "tests/test_person_3.py::test_missing_seller_record",
+  "tests/test_person_3.py::test_missing_shipping_limit",
+  "tests/test_person_3.py::test_multiple_sellers_all_on_time",
+  "tests/test_person_3.py::test_multiple_sellers_both_late",
+  "tests/test_person_3.py::test_multiple_sellers_one_late",
+  "tests/test_person_3.py::test_order_status_normalization"
+]

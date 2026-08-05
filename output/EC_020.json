@@ -1,9 +1,9 @@
 {
   "case_id": "EC_020",
   "assessment": {
-    "primary_issue": "valid_split_payment",
+    "primary_issue": "unsupported_late_claim",
     "case_status": "no_action",
-    "confidence": 1.0
+    "confidence": 0.9
   },
   "affected_entities": {
     "order_ids": [
@@ -23,7 +23,7 @@
   "root_cause_analysis": {
     "ranked_causes": [
       {
-        "cause_code": "MULTIPLE_PAYMENTS_RECONCILED",
+        "cause_code": "DELIVERY_WITHIN_ESTIMATE",
         "rank": 1
       }
     ],
@@ -35,7 +35,7 @@
     "payment:96087ef44ca9abdbc4c372a3dd3c859f:2",
     "payment:96087ef44ca9abdbc4c372a3dd3c859f:1",
     "seller:7813ea3ebd9411dc600b4dd01f7a97b9",
-    "policy:MULTIPLE_PAYMENTS_RECONCILED"
+    "policy:DELIVERY_WITHIN_ESTIMATE"
   ],
   "financial_resolution": {
     "currency": "BRL",
@@ -45,6 +45,6 @@
     "recommended_refund_brl": 0.0
   },
   "resolution_actions": [
-    "explain_valid_split_payment"
+    "reject_late_refund"
   ]
 }

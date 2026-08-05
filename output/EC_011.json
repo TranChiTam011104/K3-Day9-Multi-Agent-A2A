@@ -12,7 +12,7 @@
     "item_ids": [],
     "seller_ids": [],
     "payment_ids": [
-      "2636a02ee7de9590df86a4c24b739c49:1"
+      "payment:2636a02ee7de9590df86a4c24b739c49:1"
     ]
   },
   "root_cause_analysis": {

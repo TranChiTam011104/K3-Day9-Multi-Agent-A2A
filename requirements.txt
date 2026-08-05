@@ -1,0 +1,12 @@
+# Core dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+
+# LLM Integration - Gemini 2.0 Flash (< 8B parameter class model)
+google-generativeai>=0.8.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Testing
+pytest>=7.0.0
