@@ -1,9 +1,20 @@
 {
+  "cohort": "K3",
+  "repo_starter": "https://github.com/your-repo/K3-Day9-Multi-Agent-A2A",
+  "policy_version": "EC_POLICY_V1",
   "model_name": "gpt-4o-mini",
   "parameter_size": "8B",
   "provider": "openai",
   "framework": "langchain",
   "runtime": "python 3.11",
   "created_at": "2026-08-05",
-  "team": "Người 1 - Architecture & Infrastructure"
+  "agents": [
+    "Coordinator Agent",
+    "Order & Seller Agent",
+    "Delivery Agent",
+    "Payment Agent",
+    "Policy Agent",
+    "Verifier Agent"
+  ],
+  "team": "K3 Multi-Agent Team"
 }
