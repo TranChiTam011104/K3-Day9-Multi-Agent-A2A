@@ -1,0 +1,41 @@
+{
+  "case_id": "EC_025",
+  "order_id": "e06ff711ddcab05c3651a9b1bb003950",
+  "order_status": "delivered",
+  "order_delivered_carrier_date": "2017-03-03 14:09:15",
+  "freight_total_brl": 51.27,
+  "seller_ids": [
+    "391fc6631aebcf3004804e51b40bcf1e"
+  ],
+  "violating_sellers": [],
+  "items": [
+    {
+      "item_id": "item:e06ff711ddcab05c3651a9b1bb003950:1",
+      "seller_id": "391fc6631aebcf3004804e51b40bcf1e",
+      "shipping_limit_date": "2017-03-08 12:05:49",
+      "freight_value": 17.09,
+      "is_late_handoff": false
+    },
+    {
+      "item_id": "item:e06ff711ddcab05c3651a9b1bb003950:2",
+      "seller_id": "391fc6631aebcf3004804e51b40bcf1e",
+      "shipping_limit_date": "2017-03-08 12:05:49",
+      "freight_value": 17.09,
+      "is_late_handoff": false
+    },
+    {
+      "item_id": "item:e06ff711ddcab05c3651a9b1bb003950:3",
+      "seller_id": "391fc6631aebcf3004804e51b40bcf1e",
+      "shipping_limit_date": "2017-03-08 12:05:49",
+      "freight_value": 17.09,
+      "is_late_handoff": false
+    }
+  ],
+  "evidence_ids": [
+    "order:e06ff711ddcab05c3651a9b1bb003950",
+    "item:e06ff711ddcab05c3651a9b1bb003950:1",
+    "item:e06ff711ddcab05c3651a9b1bb003950:2",
+    "item:e06ff711ddcab05c3651a9b1bb003950:3",
+    "seller:391fc6631aebcf3004804e51b40bcf1e"
+  ]
+}
