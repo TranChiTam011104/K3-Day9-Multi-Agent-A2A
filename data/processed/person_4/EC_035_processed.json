@@ -1,0 +1,32 @@
+{
+  "case_id": "EC_035",
+  "order_id": "2478ddd1d1395639b71cf0d498d8dbf6",
+  "order_status": "delivered",
+  "order_estimated_delivery_date": "2017-09-01 00:00:00",
+  "order_delivered_customer_date": "2017-08-21 18:47:38",
+  "is_late_delivery": false,
+  "late_sellers": [],
+  "on_time_sellers": [
+    "4e17c65a516f69d023a2ae78b84f28d6"
+  ],
+  "payments": [
+    {
+      "payment_sequential": 1,
+      "payment_type": "credit_card",
+      "payment_installments": 4,
+      "payment_value": 41.85
+    }
+  ],
+  "payments_count": 1,
+  "is_split_payment": false,
+  "item_total_brl": 30.0,
+  "freight_total_brl": 11.85,
+  "expected_total_brl": 41.85,
+  "payment_total_brl": 41.85,
+  "difference_brl": 0.0,
+  "is_reconciled": true,
+  "evidence_ids": [
+    "order:2478ddd1d1395639b71cf0d498d8dbf6",
+    "payment:2478ddd1d1395639b71cf0d498d8dbf6:1"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "case_id": "EC_033",
+  "order_id": "a5c8f3a11dcb9bd9b0acdfb8101dfdc8",
+  "order_status": "delivered",
+  "order_estimated_delivery_date": "2018-06-05 00:00:00",
+  "order_delivered_customer_date": "2018-06-12 22:50:41",
+  "is_late_delivery": true,
+  "late_sellers": [
+    "1025f0e2d44d7041d6cf58b6550e0bfa"
+  ],
+  "on_time_sellers": [],
+  "payments": [
+    {
+      "payment_sequential": 1,
+      "payment_type": "boleto",
+      "payment_installments": 1,
+      "payment_value": 138.72
+    }
+  ],
+  "payments_count": 1,
+  "is_split_payment": false,
+  "item_total_brl": 120.0,
+  "freight_total_brl": 18.72,
+  "expected_total_brl": 138.72,
+  "payment_total_brl": 138.72,
+  "difference_brl": 0.0,
+  "is_reconciled": true,
+  "evidence_ids": [
+    "order:a5c8f3a11dcb9bd9b0acdfb8101dfdc8",
+    "payment:a5c8f3a11dcb9bd9b0acdfb8101dfdc8:1"
+  ]
+}
