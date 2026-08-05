@@ -187,9 +187,11 @@ def analyze_delivery_timing(order_id: str) -> Dict[str, Any]:
     result["on_time_sellers"] = list(set(result["on_time_sellers"]) - set(result["late_sellers"]))
 
     # Check if delivery is late (compare with estimated)
-    if pd.notna(order_estimated_delivery) and pd.notna(order_delivered_customer):
-        result["is_late_delivery"] = (
-            order_delivered_customer > order_estimated_delivery
+    if pd.notna(order.get("order_estimated_delivery_date")) and pd.notna(
+        order.get("order_delivered_customer_date")
+    ):
+        result["is_late_delivery"] = bool(
+            order["order_delivered_customer_date"] > order["order_estimated_delivery_date"]
         )
 
     return result
@@ -224,14 +226,14 @@ def check_payment_reconciliation(order_id: str, tolerance: float = 0.10) -> Dict
     return {
         "order_id": order_id,
         "payments_count": payments_count,
-        "is_split_payment": payments_count >= 2,
+        "is_split_payment": bool(payments_count >= 2),
         "item_total_brl": item_total,
         "freight_total_brl": freight_total,
         "expected_total_brl": expected_total,
         "payment_total_brl": payment_total,
         "difference_brl": difference,
-        "is_reconciled": is_reconciled,
-        "within_tolerance": abs(difference) <= tolerance,
+        "is_reconciled": bool(is_reconciled),
+        "within_tolerance": bool(abs(difference) <= tolerance),
     }
 
 

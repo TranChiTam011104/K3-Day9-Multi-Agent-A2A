@@ -1,0 +1,25 @@
+{
+  "case_id": "EC_004",
+  "order_id": "fd28a6dfe413804d0b89b7c9abf5b1f3",
+  "order_status": "delivered",
+  "order_delivered_carrier_date": "2018-06-19 19:02:00",
+  "freight_total_brl": 32.06,
+  "seller_ids": [
+    "17a053fcb14bd219540cbde0df490be0"
+  ],
+  "violating_sellers": [],
+  "items": [
+    {
+      "item_id": "item:fd28a6dfe413804d0b89b7c9abf5b1f3:1",
+      "seller_id": "17a053fcb14bd219540cbde0df490be0",
+      "shipping_limit_date": "2018-06-25 13:30:45",
+      "freight_value": 32.06,
+      "is_late_handoff": false
+    }
+  ],
+  "evidence_ids": [
+    "order:fd28a6dfe413804d0b89b7c9abf5b1f3",
+    "item:fd28a6dfe413804d0b89b7c9abf5b1f3:1",
+    "seller:17a053fcb14bd219540cbde0df490be0"
+  ]
+}

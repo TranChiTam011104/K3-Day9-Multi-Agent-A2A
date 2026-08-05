@@ -1,0 +1,13 @@
+{
+  "case_id": "EC_005",
+  "order_id": "9a31fd9d697e9670777501f720773fd9",
+  "order_status": "unavailable",
+  "order_delivered_carrier_date": null,
+  "freight_total_brl": 0.0,
+  "seller_ids": [],
+  "violating_sellers": [],
+  "items": [],
+  "evidence_ids": [
+    "order:9a31fd9d697e9670777501f720773fd9"
+  ]
+}
