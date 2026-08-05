@@ -1,0 +1,67 @@
+{
+  "case_id": "EC_046",
+  "claimed_order_id": "2208f3a59d7067fe62c900692f5fdcaf",
+  "policy_version": "EC_POLICY_V1",
+  "producer": "person_5_payment_delivery",
+  "source_tables": [
+    "olist_orders_dataset.csv",
+    "olist_order_items_dataset.csv",
+    "olist_order_payments_dataset.csv",
+    "olist_sellers_dataset.csv"
+  ],
+  "order_status": "delivered",
+  "payment_analysis": {
+    "payments_count": 2,
+    "is_split_payment": true,
+    "payment_total_brl": 126.01,
+    "payments": [
+      {
+        "payment_sequential": 1,
+        "payment_type": "credit_card",
+        "payment_installments": 1,
+        "payment_value_brl": 39.17,
+        "evidence_id": "payment:2208f3a59d7067fe62c900692f5fdcaf:1"
+      },
+      {
+        "payment_sequential": 2,
+        "payment_type": "voucher",
+        "payment_installments": 1,
+        "payment_value_brl": 86.84,
+        "evidence_id": "payment:2208f3a59d7067fe62c900692f5fdcaf:2"
+      }
+    ]
+  },
+  "delivery_analysis": {
+    "estimated_delivery_date": "2018-03-05 00:00:00",
+    "delivered_customer_date": "2018-02-16 18:18:58",
+    "delivered_carrier_date": "2018-02-07 00:16:02",
+    "delivered_after_estimate": false,
+    "seller_handoffs": [
+      {
+        "order_item_id": 1,
+        "seller_id": "fde0cc9ea29c8ccfc0a2c22256a58c71",
+        "shipping_limit_date": "2018-02-09 12:30:23",
+        "delivered_carrier_date": "2018-02-07 00:16:02",
+        "handoff_after_shipping_limit": false,
+        "item_evidence_id": "item:2208f3a59d7067fe62c900692f5fdcaf:1",
+        "seller_evidence_id": "seller:fde0cc9ea29c8ccfc0a2c22256a58c71"
+      }
+    ]
+  },
+  "financial_analysis": {
+    "item_total_brl": 99.0,
+    "freight_total_brl": 27.01,
+    "expected_total_brl": 126.01,
+    "payment_total_brl": 126.01,
+    "difference_brl": 0.0,
+    "tolerance_brl": 0.1,
+    "is_reconciled": true
+  },
+  "evidence_ids": [
+    "order:2208f3a59d7067fe62c900692f5fdcaf",
+    "item:2208f3a59d7067fe62c900692f5fdcaf:1",
+    "payment:2208f3a59d7067fe62c900692f5fdcaf:1",
+    "payment:2208f3a59d7067fe62c900692f5fdcaf:2",
+    "seller:fde0cc9ea29c8ccfc0a2c22256a58c71"
+  ]
+}

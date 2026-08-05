@@ -1,0 +1,59 @@
+{
+  "case_id": "EC_049",
+  "claimed_order_id": "5b9e9502eca103a28ea22a94c65e3950",
+  "policy_version": "EC_POLICY_V1",
+  "producer": "person_5_payment_delivery",
+  "source_tables": [
+    "olist_orders_dataset.csv",
+    "olist_order_items_dataset.csv",
+    "olist_order_payments_dataset.csv",
+    "olist_sellers_dataset.csv"
+  ],
+  "order_status": "delivered",
+  "payment_analysis": {
+    "payments_count": 1,
+    "is_split_payment": false,
+    "payment_total_brl": 45.3,
+    "payments": [
+      {
+        "payment_sequential": 1,
+        "payment_type": "credit_card",
+        "payment_installments": 1,
+        "payment_value_brl": 45.3,
+        "evidence_id": "payment:5b9e9502eca103a28ea22a94c65e3950:1"
+      }
+    ]
+  },
+  "delivery_analysis": {
+    "estimated_delivery_date": "2018-08-20 00:00:00",
+    "delivered_customer_date": "2018-08-27 18:55:45",
+    "delivered_carrier_date": "2018-08-06 14:17:00",
+    "delivered_after_estimate": true,
+    "seller_handoffs": [
+      {
+        "order_item_id": 1,
+        "seller_id": "955fee9216a65b617aa5c0531780ce60",
+        "shipping_limit_date": "2018-08-08 09:50:26",
+        "delivered_carrier_date": "2018-08-06 14:17:00",
+        "handoff_after_shipping_limit": false,
+        "item_evidence_id": "item:5b9e9502eca103a28ea22a94c65e3950:1",
+        "seller_evidence_id": "seller:955fee9216a65b617aa5c0531780ce60"
+      }
+    ]
+  },
+  "financial_analysis": {
+    "item_total_brl": 29.99,
+    "freight_total_brl": 15.31,
+    "expected_total_brl": 45.3,
+    "payment_total_brl": 45.3,
+    "difference_brl": 0.0,
+    "tolerance_brl": 0.1,
+    "is_reconciled": true
+  },
+  "evidence_ids": [
+    "order:5b9e9502eca103a28ea22a94c65e3950",
+    "item:5b9e9502eca103a28ea22a94c65e3950:1",
+    "payment:5b9e9502eca103a28ea22a94c65e3950:1",
+    "seller:955fee9216a65b617aa5c0531780ce60"
+  ]
+}
