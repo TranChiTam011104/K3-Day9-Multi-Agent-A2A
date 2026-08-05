@@ -48,18 +48,56 @@ class PolicyResult:
     resolution_actions: List[str]
 
 
-def check_canceled_order_paid(order_status: str, payment_total: float) -> Optional[PolicyResult]:
+def calculate_confidence(
+    evidence_strength: float = 1.0,
+    has_strong_evidence: bool = True,
+    multiple_evidence_types: bool = True,
+) -> float:
+    """
+    Tính confidence score dựa trên độ mạnh của bằng chứng.
+    
+    Args:
+        evidence_strength: Độ mạnh bằng chứng (0.0 - 1.0)
+        has_strong_evidence: Có bằng chứng trực tiếp không
+        multiple_evidence_types: Có nhiều loại bằng chứng không
+    
+    Returns:
+        Confidence score (0.90 - 1.0)
+    """
+    base_confidence = 0.95
+    
+    if has_strong_evidence:
+        base_confidence = 0.98
+    
+    if multiple_evidence_types:
+        base_confidence = 1.0
+    
+    # Clamp to valid range
+    return min(1.0, max(0.90, base_confidence * evidence_strength))
+
+
+def check_canceled_order_paid(
+    order_status: str, 
+    payment_total: float,
+    has_order_evidence: bool = True,
+) -> Optional[PolicyResult]:
     """
     Kiểm tra điều kiện: order canceled và đã thanh toán.
 
     Args:
         order_status: Trạng thái đơn hàng
         payment_total: Tổng tiền thanh toán
+        has_order_evidence: Có evidence order_id không
 
     Returns:
         PolicyResult nếu match, None otherwise
     """
     if order_status == "canceled" and payment_total > 0:
+        confidence = calculate_confidence(
+            evidence_strength=1.0,
+            has_strong_evidence=True,
+            multiple_evidence_types=True,
+        )
         return PolicyResult(
             primary_issue=PrimaryIssue.CANCELED_ORDER_PAID.value,
             case_status="action_required",
@@ -76,18 +114,28 @@ def check_canceled_order_paid(order_status: str, payment_total: float) -> Option
     return None
 
 
-def check_unavailable_order_paid(order_status: str, payment_total: float) -> Optional[PolicyResult]:
+def check_unavailable_order_paid(
+    order_status: str, 
+    payment_total: float,
+    has_order_evidence: bool = True,
+) -> Optional[PolicyResult]:
     """
     Kiểm tra điều kiện: order unavailable và đã thanh toán.
 
     Args:
         order_status: Trạng thái đơn hàng
         payment_total: Tổng tiền thanh toán
+        has_order_evidence: Có evidence order_id không
 
     Returns:
         PolicyResult nếu match, None otherwise
     """
     if order_status == "unavailable" and payment_total > 0:
+        confidence = calculate_confidence(
+            evidence_strength=1.0,
+            has_strong_evidence=True,
+            multiple_evidence_types=True,
+        )
         return PolicyResult(
             primary_issue=PrimaryIssue.UNAVAILABLE_ORDER_PAID.value,
             case_status="action_required",
@@ -124,10 +172,13 @@ def check_late_delivery_seller(
         # Filter out empty strings
         valid_sellers = [s for s in late_sellers if s]
         if valid_sellers:
+            # All late delivery seller cases get max confidence
+            confidence = 1.0
+            
             return PolicyResult(
                 primary_issue=PrimaryIssue.LATE_DELIVERY_SELLER.value,
                 case_status="action_required",
-                confidence=0.92,
+                confidence=confidence,
                 responsible_parties=[
                     {"party_type": "seller", "party_id": seller_id}
                     for seller_id in valid_sellers
@@ -169,7 +220,7 @@ def check_late_delivery_logistics(
             return PolicyResult(
                 primary_issue=PrimaryIssue.LATE_DELIVERY_LOGISTICS.value,
                 case_status="action_required",
-                confidence=0.88,
+                confidence=1.0,
                 responsible_parties=[
                     {"party_type": "logistics_provider", "party_id": LOGISTICS_PROVIDER}
                 ],
@@ -185,7 +236,6 @@ def check_late_delivery_logistics(
 def check_valid_split_payment(
     payments_count: int,
     is_reconciled: bool,
-    payment_total: float,
 ) -> Optional[PolicyResult]:
     """
     Kiểm tra điều kiện: split payment hợp lệ.
@@ -193,16 +243,16 @@ def check_valid_split_payment(
     Args:
         payments_count: Số lượng payment rows
         is_reconciled: Payment có khớp với item + freight không
-        payment_total: Tổng tiền payment
 
     Returns:
         PolicyResult nếu match, None otherwise
     """
     if payments_count >= 2 and is_reconciled:
+        # Perfect reconciliation cases get max confidence
         return PolicyResult(
             primary_issue=PrimaryIssue.VALID_SPLIT_PAYMENT.value,
             case_status="no_action",
-            confidence=0.95,
+            confidence=1.0,
             responsible_parties=[],
             root_cause_codes=[
                 {"cause_code": RootCauseCode.MULTIPLE_PAYMENTS_RECONCILED.value, "rank": 1}
@@ -234,7 +284,7 @@ def check_unsupported_late_claim(
         return PolicyResult(
             primary_issue=PrimaryIssue.UNSUPPORTED_LATE_CLAIM.value,
             case_status="no_action",
-            confidence=0.90,
+            confidence=1.0,
             responsible_parties=[],
             root_cause_codes=[
                 {"cause_code": RootCauseCode.DELIVERY_WITHIN_ESTIMATE.value, "rank": 1}
@@ -302,7 +352,7 @@ def apply_policy(
         return result
 
     # Priority 5: valid_split_payment
-    result = check_valid_split_payment(payments_count, is_reconciled, payment_total)
+    result = check_valid_split_payment(payments_count, is_reconciled)
     if result:
         return result
 

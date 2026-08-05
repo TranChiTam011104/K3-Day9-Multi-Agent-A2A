@@ -34,6 +34,7 @@ from src import (
     log_case_error,
     log_case_end,
     write_trace,
+    calculate_policy_confidence,
 )
 
 logging.basicConfig(
@@ -73,6 +74,7 @@ def process_case(case_id: str) -> bool:
             "late": delivery["is_late_delivery"],
             "late_sellers": delivery["late_sellers"],
             "on_time_sellers": delivery["on_time_sellers"],
+            "margin_days": delivery.get("delivery_margin_days", 0),
         })
 
         # Payment Agent
@@ -84,6 +86,7 @@ def process_case(case_id: str) -> bool:
 
         # Policy Agent
         financials = order_data["financials"]
+        
         policy_result = apply_policy(
             order_status=order_status,
             payment_total=financials["payment_total_brl"],
@@ -95,8 +98,16 @@ def process_case(case_id: str) -> bool:
             freight_total=financials["freight_total_brl"],
         )
 
-        logger.info(f"[{case_id}] Issue: {policy_result.primary_issue}, Refund: {policy_result.recommended_refund_brl} BRL")
-        log_policy_result(case_id, policy_result.primary_issue, policy_result.confidence)
+        # Calculate confidence based on multi-agent evidence (not hardcoded)
+        confidence = calculate_policy_confidence(
+            primary_issue=policy_result.primary_issue,
+            order_data=order_data,
+            payment_data=payment,
+            delivery_data=delivery,
+        )
+
+        logger.info(f"[{case_id}] Issue: {policy_result.primary_issue}, Refund: {policy_result.recommended_refund_brl} BRL, Confidence: {confidence:.2f}")
+        log_policy_result(case_id, policy_result.primary_issue, confidence)
 
         # Build evidence IDs
         evidence_ids = [f"order:{claimed_order_id}"]
@@ -121,12 +132,12 @@ def process_case(case_id: str) -> bool:
             if policy_evidence not in evidence_ids:
                 evidence_ids.append(policy_evidence)
 
-        # Build output
+        # Build output (using calculated confidence)
         output = build_output(
             case_id=case_id,
             primary_issue=policy_result.primary_issue,
             case_status=policy_result.case_status,
-            confidence=policy_result.confidence,
+            confidence=confidence,
             order_ids=[claimed_order_id],
             item_ids=[f"{claimed_order_id}:{i.get('order_item_id', 1)}" for i in order_data["items"]],
             seller_ids=order_data["seller_ids"],

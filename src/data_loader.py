@@ -160,6 +160,7 @@ def analyze_delivery_timing(order_id: str) -> Dict[str, Any]:
         "is_late_delivery": False,
         "late_sellers": [],
         "on_time_sellers": [],
+        "delivery_margin_days": 0.0,  # Days late (negative if early)
     }
 
     if not items.empty:
@@ -193,6 +194,13 @@ def analyze_delivery_timing(order_id: str) -> Dict[str, Any]:
         result["is_late_delivery"] = bool(
             order["order_delivered_customer_date"] > order["order_estimated_delivery_date"]
         )
+        
+        # Calculate delivery margin in days
+        if result["is_late_delivery"]:
+            delta = pd.to_datetime(order["order_delivered_customer_date"]) - pd.to_datetime(
+                order["order_estimated_delivery_date"]
+            )
+            result["delivery_margin_days"] = delta.days
 
     return result
 

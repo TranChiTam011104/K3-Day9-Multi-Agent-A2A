@@ -31,6 +31,13 @@ from .policy import (
     LOGISTICS_PROVIDER,
 )
 
+from .confidence import (
+    calculate_policy_confidence,
+    calculate_order_agent_confidence,
+    calculate_payment_agent_confidence,
+    calculate_delivery_agent_confidence,
+)
+
 from .output_writer import (
     build_output,
     write_output,
@@ -75,6 +82,11 @@ __all__ = [
     "ResolutionAction",
     "OLIST_PLATFORM",
     "LOGISTICS_PROVIDER",
+    # confidence
+    "calculate_policy_confidence",
+    "calculate_order_agent_confidence",
+    "calculate_payment_agent_confidence",
+    "calculate_delivery_agent_confidence",
     # output_writer
     "build_output",
     "write_output",
