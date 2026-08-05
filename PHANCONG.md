@@ -237,11 +237,11 @@ EC_046, EC_047, EC_048, EC_049, EC_050
 
 ## CHECKLIST TRƯỚC KHI SUBMIT
 
-- [ ] `output/EC_001.json` → `output/EC_050.json` (đủ 50 file)
-- [ ] `architecture.md` ở root
-- [ ] `metadata.json` ở root
-- [ ] `individual_5SoCuoiMHV_HoVaTen.md` ở root (mỗi người viết)
-- [ ] `trace.jsonl` ghi lại execution
-- [ ] Source code đã commit lên repo
-- [ ] File `.env` KHÔNG commit (chứa API key)
-- [ ] Nén `output/` thành zip (chỉ output, không chứa code)
+- [x] `output/EC_001.json` → `output/EC_050.json` (đủ 50 file)
+- [x] `architecture.md` ở root
+- [x] `metadata.json` ở root
+- [x] `individual_5SoCuoiMHV_HoVaTen.md` ở root (mỗi người viết)
+- [x] `trace.jsonl` ghi lại execution
+- [x] Source code đã commit lên repo
+- [x] File `.env` KHÔNG commit (chứa API key)
+- [x] Nén `output/` thành zip (chỉ output, không chứa code)

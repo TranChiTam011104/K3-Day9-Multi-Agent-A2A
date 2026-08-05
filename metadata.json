@@ -1,0 +1,6 @@
+{
+  "model": "gemini-1.5-flash",
+  "parameter_size": "N/A (API)",
+  "framework": "Simulated Multi-Agent (Deterministic Pipeline in Python)",
+  "runtime": "Python 3"
+}
